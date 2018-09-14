@@ -1,0 +1,130 @@
+/*GLOBAL*/
+*{ 
+	padding: 0;
+	margin: 0;
+}
+
+/*TEXT*/
+h1 {
+	font-weight: 200;
+}
+
+h2 {
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 10px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+h3 {
+	padding-top: 50px;
+	font-weight: 500;
+}
+
+p {
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+/*HTML TAGS*/
+/*misc*/
+img {
+	width: 200px;
+	height: 150px;
+}
+
+a {
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 12px;
+	line-height: 20px;
+	text-decoration: none;
+}
+
+sup {
+	font-size: 10px;
+}
+
+/*lists*/
+ol {
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+ul {
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+li {
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+/*table*/
+table tr {
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 10px;
+	line-height: 17px;
+}
+
+table tr th {
+	text-align: left;
+	vertical-align: top;
+}
+
+table tr td {
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+table tr td a {
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 10px;
+}
+
+table tr td sup{
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 9px;
+}
+
+/*DIV IDS*/
+#titles {
+	padding-top: 50px;
+	width: 80%;
+	margin: auto;
+}
+
+#content {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: auto;
+}
+
+#text {
+	padding-right: 30px;
+}
+
+#hotel-side {
+	background-color: #e8e8e8;
+	border-color: #bfbfbf;
+	border-style: solid;
+	border-width: 1px;
+	padding: 2px;
+}
+
+/*DIV CLASSES*/
+.line {
+	background-color: #bfbfbf;
+	width: 100%;
+	height: 1px;
+}
