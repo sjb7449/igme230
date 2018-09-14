@@ -193,36 +193,36 @@ header img.logo {
 
 /*hover exercises - w3 schools*/
 #exercises .flex .hover {
-  position: relative;
+	position: relative;
 }
 
 #exercises .flex .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: .5s ease;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transition: .5s ease;
 }
 
 #exercises .flex .hover:hover .overlay {
-  opacity: 1;
+	opacity: 1;
 }
 
 #exercises .flex .name {
-  color: #f3f3f3;
-  font-family: 'Cabin', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  text-transform: uppercase;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+	color: #f3f3f3;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 /*PROJECTS*/
@@ -259,10 +259,7 @@ header img.logo {
 /*OUTRO*/
 #outro {
 	margin: 0 auto;
-	background-image: linear-gradient(
-	  rgba(0, 4, 48, 0.3), 
-      rgba(0, 4, 48, 0.3)
-    ),url("media/fish.jpg");
+	background-image: linear-gradient( rgba(0, 4, 48, 0.3), rgba(0, 4, 48, 0.3) ),url("media/fish.jpg");
 	background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
