@@ -1,0 +1,290 @@
+/*GLOBAL STYLES*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+	background-color: #f3f3f3;
+}
+
+/*FONT STYLES*/
+ @font-face { font-family: Amarillo; src: url('fonts/Amarillo.ttf'); } /*NOTE: The 'r' sucks*/
+
+/*HEADER & NAV STYLES*/
+header {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin-left: 10%;
+}
+ 
+header nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+header nav a {
+	text-align: center;
+	text-decoration: none;
+	color: #adadad;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 300; 
+	font-size: 15px;
+	line-height: 120px;
+	padding-right: 15px;
+}
+
+header img.logo {
+	width: 35px;
+	height: 35px;
+	padding-top: calc((120px - 35px)/2);
+}
+
+/*SPLASH*/
+#splash {	
+	margin: 0 auto;
+	background-image: linear-gradient(
+	  rgba(0, 4, 48, 0.3), 
+      rgba(0, 4, 48, 0.3)
+    ),url("media/fish.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 80%;
+	height: 500px;
+}
+
+#splash h1 {
+	font-family: Amarillo;
+	font-weight: normal;
+	letter-spacing: .2px;
+	color: #f3f3f3;
+	text-align: center;
+	font-size: 70px;
+	line-height: 90px;
+}
+ 
+#splash h2 {
+	font-family: 'Cabin', sans-serif;
+	color: #f3f3f3;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 23px;
+	text-align: center;
+	padding-top: 90px;
+	padding-bottom: 40px;
+}
+
+#splash h3 {
+	font-family: 'Cabin', sans-serif;
+	color: #f3f3f3;
+	font-size: 15px;
+	text-align: center;
+	font-weight: 400;
+	padding-top: 35px;
+}
+
+/*INTRO*/
+#intro {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	width: 40%;
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+
+#intro h1 {
+	font-family: 'Cabin', sans-serif;
+	color: #232323;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 35px;
+	padding-right: 50px;
+	text-align: right;
+	line-height: 45px;
+}
+
+#intro p {
+	font-family: 'Cabin', sans-serif;
+	color: #232323;
+	font-size: 12px;
+	line-height: 21px;
+	text-align: left;
+	width: 38%;
+	padding-top: 6px;
+}
+
+/*MIDDLE HALF*/
+#middle {
+	background-color: #232323;
+}
+
+/*ABOUT*/
+#about {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	padding-top: 125px;
+}
+
+#about img.profile {
+	display: block;
+	object-fit: cover;
+	object-position: 20% 0;
+	width: 350px;
+	height: 450px;
+	padding-right: 50px;
+}
+
+#about h1 {
+	font-family: 'Cabin', sans-serif;
+	color: #f3f3f3;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 35px;
+	text-align: left;
+	padding-top: 125px;
+}
+
+#about p {
+	padding-top: 20px;
+	font-family: 'Cabin', sans-serif;
+	color: #f3f3f3;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: left;
+}
+
+/*EXERCISES*/
+#exercises {
+	padding-top: 125px;
+	padding-bottom: 125px;
+}
+
+#exercises h1 {
+	font-family: 'Cabin', sans-serif;
+	color: #f3f3f3;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 35px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+#exercises .flex {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+#exercises .flex img.exercise {
+	display: block;
+	object-fit: cover;
+	object-position: 55% 0;
+	width: 220px;
+	height: 220px;
+}
+
+/*PROJECTS*/
+#projects {
+	padding-top: 100px;
+	padding-bottom: 125px;
+}
+
+#projects h1 {
+	font-family: 'Cabin', sans-serif;
+	color: #232323;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 35px;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+#projects .flex {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+#projects .flex img.project {
+	display: block;
+	object-fit: cover;
+	object-position: 55% 0;
+	width: 355px;
+	height: 355px;
+}
+
+/*OUTRO*/
+#outro {
+	margin: 0 auto;
+	background-image: linear-gradient(
+	  rgba(0, 4, 48, 0.3), 
+      rgba(0, 4, 48, 0.3)
+    ),url("media/fish.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 80%;
+	height: 300px;
+}
+
+#outro h1 {
+	font-family: Amarillo;
+	font-weight: normal;
+	letter-spacing: .2px;
+	color: #f3f3f3;
+	text-align: center;
+	font-size: 50px;
+	padding-top: 90px;
+}
+
+/*FOOTER*/
+#space {
+	padding-top: 125px;
+}
+
+footer {
+	background-color: #232323;
+}
+
+footer #foot {
+	background-color: #232323;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+}
+
+footer #foot p {
+	padding-top: 45px;
+	font-family: 'Cabin', sans-serif;
+	color: #f3f3f3;
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: .5px;
+}
+
+footer #foot .flex {
+	padding-top: 45px;
+	text-align: right;
+}
+
+footer #foot .flex a {
+	font-family: 'Cabin', sans-serif;
+	color: #f3f3f3;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-left: 20px;
+	font-weight: 700;
+	letter-spacing: .5px;
+}
