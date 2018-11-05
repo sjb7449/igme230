@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<title>Samantha Burke</title>
+        <link rel="stylesheet" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <script>
+		/*function for clickable dropdown menu*/
+		/*once the button is click, the menu will drop down*/
+		function dropDown() {
+			document.getElementById("dropList").classList.toggle("show");
+		}
+
+		/*this will close the menu once the button is clicked again*/
+		window.onclick = function(event) {
+			if (!event.target.matches('.click-bn')) {
+				var dropbn = document.getElementsByClassName("click-drop");
+				var i;
+				for (i = 0; i < dropbn.length; i++) {
+					var dropDown = dropbn[i];
+					if (dropDown.classList.contains('show')) {
+						dropDown.classList.remove('show');
+					}
+				}
+		  }
+		}
+	</script>
+	
+	</head>
+	<body>
+		<!--HEADER & NAVIGATION SECTION-->
+		<header>
+			<nav>
+				<a href="index.html#portfolio">Portfolio</a>
+				<a href="about.html">About</a>
+				<a href="contact.html">Contact</a>
+				<a href="resume.html">Resume</a>
+			</nav>
+			<a href="index.html"><img class="logo" src="media/logo.png" alt="logo"/></a>
+			<div class="links">
+				<a href="#"><img src="media/behance.png" alt="Behance" width="27" height="18"/></a>
+				<a href="#"><img src="media/linkedin.png" alt="LinkedIn" width="19" height="17"/></a>
+				<a href="#"><img src="media/vimeo.png" alt="Vimeo" width="20" height="18"/></a>
+			</div>
+		</header>
+		
+		<!--CONTENT-->
+		<div id="doc">
+			<div class="doc-content">
+				<h3 class="doc-title">Design Document</h3>
+				<!--pages-->
+				<div class="doc-work">
+					<div class="doc-left">
+						<h2 class="doc-subheader">Web Pages</h2>
+						
+						<h4 class="doc-subtitle">Home/Index</h4>
+						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						
+						<h4 class="doc-subtitle">About</h4>
+						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						
+						<h4 class="doc-subtitle">Contact</h4>
+						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						
+						<h4 class="doc-subtitle">doc</h4>
+						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						
+						<h4 class="doc-subtitle">Project Information Pages</h4>
+						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+					
+						<h2 class="doc-subheader">Other Info.</h2>
+						<h4 class="doc-subtitle">Navigation</h4>
+						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						
+						<h4 class="doc-subtitle">Dropdown Menu</h4>
+						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+							<!--dropdown hover-->
+							<div class="drop-down">
+								<button class="drop">Documentation Navigation</button>
+								<div class="drop-drop">
+									<a href="#">Top of Page</a>
+									<a href="#doc">Content Section</a>
+									<a href="#contact-banner">Contact Section</a>
+								</div>
+							</div>
+							
+							<!--dropdown hover-->
+							<div class="click-down">
+								<button onclick="dropDown()" class="click-bn">Dropdown</button>
+								<div id="dropList" class="click-drop">
+									<a href="#">Top of Page</a>
+									<a href="#doc">Content Section</a>
+									<a href="#contact-banner">Contact Section</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--CONTACT SECTION-->
+		<div id="contact-banner">
+			<h1>Let's keep in touch!</h1>
+			<a href="contact.html" class="say-hello">Say Hello!</a>
+		</div>
+		
+		<!--FOOTER SECTION-->
+		<footer>
+			<p class="foot-text" style="margin-left: 200px; margin-top: 30px;">&copy; 2018 Samantha Burke</p>
+			<p class="foot-text" style="margin-right: 200px; margin-top: 30px;"><a href="document.html" class="foot">Design Document</a></p>
+		</footer>
+	</body>
+</html>

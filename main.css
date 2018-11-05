@@ -5,18 +5,75 @@
 }
 
 body {
-	background-color: #f3f3f3;
+	background-color: #fdfdfd;
 }
 
 /*FONT STYLES*/
  @font-face { font-family: Amarillo; src: url('fonts/Amarillo.ttf'); } /*NOTE: The 'r' sucks*/
 
+h1 {
+	font-family: Amarillo;
+	font-weight: normal;
+	letter-spacing: .2px;
+	color: #262c48;
+	text-align: center;
+	font-size: 70px;
+	line-height: 90px;
+}
+ 
+h2 {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	text-transform: uppercase;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 95px;
+	padding-bottom: 35px;
+	line-height: 30px;
+}
+
+h3 {
+	font-family: 'Cabin', sans-serif;
+	color: #fdfdfd;
+	font-size: 50px;
+	padding-top: 180px;
+	font-weight: 600;
+}
+
+p.splash-subtitle {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	text-align: center;
+	padding-top: 30px;
+}
+
+p.portfolio-subtitle {
+	font-family: 'Cabin', sans-serif;
+	color: #fdfdfd;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 25px;
+}
+
+p.portfolio-desc {
+	font-family: 'Cabin', sans-serif;
+	color: #fdfdfd;
+	font-size: 16px;
+	padding-top: 30px;
+	font-weight: 400;
+	line-height: 25px;
+}
+ 
 /*HEADER & NAV STYLES*/
 header {
 	display: flex;
 	justify-content: space-between;
-	width: 80%;
-	margin-left: 10%;
+	height: 100px;
+	background: #fdfdfd;
+	margin-left: 200px;
+	margin-right: 200px;
 }
  
 header nav {
@@ -29,328 +86,974 @@ header nav a {
 	text-decoration: none;
 	color: #adadad;
 	font-family: 'Cabin', sans-serif;
-	font-weight: 300; 
+	font-weight: 500; 
 	font-size: 15px;
-	line-height: 120px;
-	padding-right: 15px;
+	line-height: 100px;
+	padding-right: 30px;
 }
 
-header img.logo {
-	width: 35px;
-	height: 35px;
-	padding-top: calc((120px - 35px)/2);
+header .links { /*NOTE: I need these images to be vectors (svgs) instead*/
+	display: flex;
+	justify-content: space-between;
+	padding-top: 40px;
+} 
+
+header .links a {
+	padding-left: 18px;
 }
 
-/*SPLASH*/
-#splash {	
-	margin: 0 auto;
-	background-image: linear-gradient(
-	  rgba(0, 4, 48, 0.3), 
-      rgba(0, 4, 48, 0.3)
-    ),url("media/fish.jpg");
-	background-attachment: fixed;
-    background-position: center;
+header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
+	width: 55px;
+	height: 55px;
+	padding-top: 20px;
+	padding-right: 200px; /*NOTE: Needs this to be centered... Is there a better way to do it?*/
+}
+ 
+/*INDEX STYLES*/
+/*splash section*/
+#splash {
+	width: 100%;
+	height: 480px;
+	background:
+	/*white tint*/
+	linear-gradient(rgba(253,253,253, 0.75), rgba(253,253,253, 0.75)),
+	url("media/display-phone.png");
+	/*vignette*/
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 200px
+	rgba(0,0,0,.3) inset;
+	background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-	width: 80%;
-	height: 500px;
+    background-size: 600px 650px;
 }
 
-#splash h1 {
+/*portfolio section*/
+#portfolio {
+	background-color: #333c68;
+	width: 100%;
+	height: 600px;
+	/*vignette*/
+	top: 0;
+	left: 0;
+	box-shadow: 150px 50px 600px 50px
+	rgba(38,44,72,.7) inset;
+	padding-bottom: 45px;
+	padding-top: 45px;
+}
+
+#portfolio .port-content {
+	margin-right: 200px;
+	margin-left: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#portfolio .port-desc {
+	width: 350px;
+}
+
+#portfolio .tabs { /*NOTE: Need to adjust this for javascript*/
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+	width: 155px;
+	padding-left: 44.75%;
+}
+
+#portfolio a {
+	display: flex;
+	justify-content: space-between;
+	width: 110px;
+	line-height: 50px;
+	font-weight: 700;
+	font-family: 'Cabin', sans-serif;
+	color: #fdfdfd;
+	font-size: 16px;
+	padding-top: 30px;
+	font-weight: 700;
+	line-height: 25px;
+	text-decoration: none;
+}
+
+#portfolio img.view { /*NOTE: I need these images to be vectors (svgs) instead --> In index.html there's padding on the images, that will need to be fixed as well*/
+	width: 15px;	  /*NOTE: The circles need to be vectors*/
+	height: 15px;
+	padding-top: 5px;
+}
+
+#portfolio img.display {
+	padding-top: 60px;
+}
+
+/*additional projects section*/
+.add-proj {
+	padding-top: 60px;
+	padding-left: 200px;
+	padding-right: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.add-proj h4 {
+	font-family: 'Cabin', sans-serif;
+	text-align: left;
+	padding-left: 60px; 
+	color: #fdfdfd;
+	font-size: 35px;
+	font-weight: 600;
+	padding-top: 4px;
+	padding-bottom: 10px;
+	padding-top: 400px;
+}
+
+.add-proj h5 {
+	font-family: 'Cabin', sans-serif;
+	text-align: left;
+	padding-left: 60px;
+	color: #fdfdfd;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: .5px;
+}
+
+/*individual additional projects*/
+.add-proj .fliers {
+	text-decoration: none;
+	background: url("media/contact.jpg");
+	display: block;
+	background-size: cover;
+	background-position: 50% 90%;
+    background-repeat: no-repeat;
+	width: 530px;
+	height: 530px;
+}
+
+.add-proj .fliers:hover {
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 400px rgba(38,44,72,.4) inset;
+}
+
+.add-proj .motion {
+	text-decoration: none;
+	background: url("media/contact.jpg");
+	display: block;
+	background-size: cover;
+	background-position: 50% 90%;
+    background-repeat: no-repeat;
+	width: 530px;
+	height: 530px;
+}
+
+.add-proj .motion:hover {
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 400px rgba(38,44,72,.4) inset;
+}
+
+.add-proj .drawings {
+	text-decoration: none;
+	background: url("media/contact.jpg");
+	display: block;
+	background-size: cover;
+	background-position: 50% 90%;
+    background-repeat: no-repeat;
+	width: 530px;
+	height: 530px;
+}
+
+.add-proj .drawings:hover {
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 400px rgba(38,44,72,.4) inset;
+}
+
+.add-proj .ui-ux {
+	text-decoration: none;
+	background: url("media/contact.jpg");
+	display: block;
+	background-size: cover;
+	background-position: 50% 90%;
+    background-repeat: no-repeat;
+	width: 530px;
+	height: 530px;
+}
+
+.add-proj .ui-ux:hover {
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 400px rgba(38,44,72,.4) inset;
+}
+
+/*contact section*/
+#index-contact{
+	width: 100%;
+	margin-top: 60px;
+	/*vignette*/
+	top: 0;
+	left: 0;
+	box-shadow: 150px 50px 600px 50px
+	rgba(38,44,72,.4) inset;
+	background: url("media/contact.jpg");
+	background-size: cover;
+	background-position: 50% 90%;
+    background-repeat: no-repeat;
+	padding-bottom: 80px;
+}
+
+#index-contact h1 {
 	font-family: Amarillo;
 	font-weight: normal;
 	letter-spacing: .2px;
-	color: #f3f3f3;
+	color: #fdfdfd;
 	text-align: center;
 	font-size: 70px;
-	line-height: 90px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
- 
-#splash h2 {
-	font-family: 'Cabin', sans-serif;
-	color: #f3f3f3;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 23px;
+
+#index-contact a.say-hello {
 	text-align: center;
-	padding-top: 90px;
-	padding-bottom: 40px;
-}
-
-#splash h3 {
+	text-decoration: none;
+	color: #262c48;
 	font-family: 'Cabin', sans-serif;
-	color: #f3f3f3;
-	font-size: 15px;
-	text-align: center;
-	font-weight: 400;
-	padding-top: 35px;
-}
-
-/*INTRO*/
-#intro {
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	width: 40%;
-	padding-top: 75px;
-	padding-bottom: 75px;
-}
-
-#intro h1 {
-	font-family: 'Cabin', sans-serif;
-	color: #232323;
-	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 35px;
-	padding-right: 50px;
-	text-align: right;
-	line-height: 45px;
+	font-size: 17px;
+	letter-spacing: 1px;	
+	background-color: #fdfdfd;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 25px;
+	margin-left: 45.5%;
+	text-decoration: none;
 }
 
-#intro p {
-	font-family: 'Cabin', sans-serif;
-	color: #232323;
-	font-size: 12px;
-	line-height: 21px;
-	text-align: left;
-	width: 38%;
-	padding-top: 6px;
+#index-contact a.say-hello:hover {
+	border-style: solid;
+	border-width: .5px;
+	border-color: #fdfdfd;
+	color: #fdfdfd;
+	font-weight: 900;
+	background-color: #262c48;
 }
 
-/*MIDDLE HALF*/
-#middle {
-	background-color: #232323;
+/*CASE STUDIES SECTION*/
+#case {
+	background-color: #f3f3f3;
+	width: 100%;
+	height: 600px;
+	padding-bottom: 45px;
+	padding-top: 45px;
 }
 
-/*ABOUT*/
-#about {
-	margin: 0 auto;
+#case .case-content {
+	margin-right: 200px;
+	margin-left: 200px;
 	display: flex;
 	justify-content: space-between;
-	width: 50%;
-	padding-top: 125px;
 }
 
-#about img.profile {
+#case .case-desc {
+	width: 350px;
+}
+
+#case a {
+	display: flex;
+	justify-content: space-between;
+	width: 140px;
+	line-height: 50px;
+	font-weight: 700;
+	font-family: 'Cabin', sans-serif;
+	color: #fdfdfd;
+	font-size: 16px;
+	padding-top: 30px;
+	font-weight: 700;
+	line-height: 25px;
+	text-decoration: none;
+}
+
+#case img.view { /*NOTE: I need these images to be vectors (svgs) instead --> In index.html there's padding on the images, that will need to be fixed as well*/
+	width: 15px;	  /*NOTE: The circles need to be vectors*/
+	height: 15px;
+	padding-top: 5px;
+}
+
+#case img.display {
+	padding-top: 60px;
+}
+
+/*case study fonts*/
+p.case-subtitle {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 25px;
+}
+
+p.case-desc {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	padding-top: 30px;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+h3.case-title {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 50px;
+	padding-top: 180px;
+	font-weight: 600;
+}
+
+/*drawing section*/
+.draw {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 30px;
+}
+
+.draw .draw-img {
 	display: block;
 	object-fit: cover;
-	object-position: 20% 0;
-	width: 350px;
-	height: 450px;
-	padding-right: 50px;
+	object-position: 55% 0;
+	width: 250px;
+	height: 250px;
+	padding-left: 30px;
 }
 
-#about h1 {
-	font-family: 'Cabin', sans-serif;
-	color: #f3f3f3;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 35px;
-	text-align: left;
-	padding-top: 125px;
-}
-
-#about p {
-	padding-top: 20px;
-	font-family: 'Cabin', sans-serif;
-	color: #f3f3f3;
-	font-size: 12px;
-	line-height: 20px;
-	text-align: left;
-}
-
-/*EXERCISES*/
-#exercises {
-	padding-top: 125px;
-	padding-bottom: 125px;
-}
-
-#exercises h1 {
-	font-family: 'Cabin', sans-serif;
-	color: #f3f3f3;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 35px;
-	text-align: center;
-	padding-bottom: 40px;
-}
-
-#exercises .flex {
-	width: 50%;
+/*ABOUT SECTION*/
+/*about content*/
+#about-content {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 auto;
+	background-color: #f3f3f3;
+	padding-bottom: 60px;
+}
+
+#about-content .about-image {
+	width: 460px;
+	height: 400px;
+	margin-top: 60px;
+	margin-right: 200px;
+}
+
+/*about text*/
+#about-content .about-text {
+	padding-right: 100px;
+	margin-left: 200px;
+}
+
+#about-content .about-text .about-header {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 50px;
+	font-weight: 600;
+	padding-top: 160px;
+}
+
+#about-content .about-text .about-subtitle {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 25px;
+}
+
+#about-content .about-text .about-p {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	padding-top: 30px;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+/*resume button*/
+#about-content img.view { /*NOTE: I need these images to be vectors (svgs) instead --> In index.html there's padding on the images, that will need to be fixed as well*/
+	width: 15px;	  /*NOTE: The circles need to be vectors*/
+	height: 15px;
+	padding-top: 5px;
+}
+
+#about-content a.about-resume {
+	display: flex;
+	justify-content: space-between;
+	width: 120px;
+	line-height: 50px;
+	font-weight: 700;
+	font-family: 'Cabin', sans-serif;
+	color: #353e66;
+	font-size: 16px;
+	padding-top: 30px;
+	font-weight: 700;
+	line-height: 25px;
+	text-decoration: none;
+}
+
+#about-content a.about-resume:hover {
+	color: #333399;
+}
+
+/*CONTACT SECTION*/
+#contact-content {
+	background-color: #f3f3f3;
+	height: 100%;
+}
+
+#contact-content .contact-padding{
+	margin-right: 400px;
+	margin-left: 400px;
+	padding-bottom: 60px;
+}
+
+#contact-content h6 {
+	font-family: Amarillo;
+	letter-spacing: .2px;
+	text-align: center;
+	color: #262c48;
+	font-size: 50px;
+	font-weight: 600;
+	padding-top: 60px;
+}
+
+#contact-content p.contact-desc {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25px;
+	padding-top: 20px;
+}
+
+#contact-content p.contact-titles {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 25px;
+	padding-top: 60px;
+}
+
+#contact-content .line-input {
+	width: 100%;
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	border-radius: 5px;
+	background-color: #f3f3f3;
+	border: solid;
+	border-color: #adadad;
+	border-width: 1.5px;
+	outline: none;
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25px;
+	padding-top: 20px;
+}
+
+#contact-content .full-input {
+	width: 100%;
+	margin-top: 10px;
+	padding-top: 15px;
+	height: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+	background-color: #f3f3f3;
+	border: solid;
+	border-color: #adadad;
+	border-width: 1.5px;
+	margin-bottom: 40px;
+	outline: none;
+	white-space: pre-wrap;
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 25px;
+	padding-top: 20px;
+}
+
+#contact-content .line-input:focus {
+	border-color: #262c48;
+	border-width: 2px;
+}
+
+#contact-content .full-input:focus {
+	border-color: #262c48;
+	border-width: 2px;
+}
+
+#contact-content .message {
+	text-align: center;
+	text-decoration: none;
+	color: #fdfdfd;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 700;
+	font-size: 17px;	
+	background-color: #262c48;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 25px;
+	margin-left: 45.5%;
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+
+#contact-content .message:hover {
+	border-style: solid;
+	border-width: 1.5px;
+	border-color: #262c48;
+	color: #262c48;
+	font-weight: 900;
+	background-color: #f3f3f3;
+}
+
+/*RESUME SECTION*/
+#resume {
+	background-color: #f3f3f3;
+	padding-bottom: 30px;
+}
+
+#resume .resume-content {
+	margin-left: 350px;
+	margin-right: 350px;
+}
+
+/*resume button*/
+#resume .resume-content img.view { /*NOTE: I need these images to be vectors (svgs) instead --> In index.html there's padding on the images, that will need to be fixed as well*/
+	width: 15px;	  /*NOTE: The circles need to be vectors*/
+	height: 15px;
+	padding-top: 5px;
+}
+
+#resume .resume-content a.resume-print {
+	display: flex;
+	justify-content: space-between;
+	width: 150px;
+	line-height: 50px;
+	font-weight: 700;
+	font-family: 'Cabin', sans-serif;
+	color: #353e66;
+	font-size: 16px;
+	padding-top: 20px;
+	font-weight: 700;
+	line-height: 25px;
+	text-decoration: none;
+}
+
+#resume .resume-content a.resume-print:hover {
+	color: #333399;
+}
+
+#resume .resume-content .resume-work {
+	display: flex;
+	justify-content: space-between;
+}
+
+#resume .resume-content .resume-work .resume-left {
+	width: 400px;
+}
+
+/*resume fonts*/
+#resume a {
+	text-decoration: none;
+	color: #adadad;
+	font-weight: 400;
+}
+
+#resume a:hover {
+	text-decoration: none;
+	color: #262c48;
+}
+
+h3.resume-title {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 50px;
+	padding-top: 60px;
+	font-weight: 600;
+}
+
+h2.resume-subheader {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	text-transform: none;
+	font-size: 25px;
+	text-align: left;
+	padding-top: 80px;
+	padding-bottom: 35px;
+	line-height: 30px;
+}
+
+h4.resume-subtitle {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 25px;
+}
+
+h5.resume-position {
+	font-family: 'Cabin', sans-serif;
+	color: #adadad;
+	font-size: 14px;
+	text-transform: none;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+p.resume-desc {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 14px;
+	padding-top: 10px;
+	font-weight: 400;
+	line-height: 20px;
+	padding-bottom: 30px;
+}
+
+p.resume-ed-sub {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 14px;
+	text-transform: none;
+	font-weight: 400;
+	line-height: 25px;
+	padding-top: 5px;
+}
+
+p.resume-ed {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	padding-bottom: 5px;
+	padding-top: 0px;
+	font-weight: 700;
+}
+
+p.resume-list {
+	font-family: 'Cabin', sans-serif;
+	color: #adadad;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	padding-top: 10px;
+}
+
+h4.resume-skills {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 25px;
+	padding-top: 30px;
+}
+
+/*CASE STUDIES SECTION*/
+#doc {
+	background-color: #f3f3f3;
+	padding-bottom: 60px;
+}
+
+#doc .doc-content {
+	margin-left: 350px;
+	margin-right: 350px;
+}
+
+/*doc fonts*/
+#doc a {
+	text-decoration: none;
+	color: #adadad;
+	font-weight: 400;
+}
+
+#doc a:hover {
+	text-decoration: none;
+	color: #262c48;
+}
+
+h3.doc-title {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 50px;
+	padding-top: 60px;
+	padding-bottom: 30px;
+	font-weight: 600;
+}
+
+h2.doc-subheader {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	text-transform: none;
+	font-size: 25px;
+	text-align: left;
+	padding-top: 40px;
+	padding-bottom: 35px;
+	line-height: 30px;
+}
+
+h4.doc-subtitle {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 25px;
+}
+
+h5.doc-position {
+	font-family: 'Cabin', sans-serif;
+	color: #adadad;
+	font-size: 14px;
+	text-transform: none;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+p.doc-desc {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 14px;
+	padding-top: 10px;
+	font-weight: 400;
+	line-height: 20px;
+	padding-bottom: 30px;
+}
+
+p.doc-ed-sub {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 14px;
+	text-transform: none;
+	font-weight: 400;
+	line-height: 25px;
+	padding-top: 5px;
+}
+
+p.doc-ed {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	padding-bottom: 5px;
+	padding-top: 0px;
+	font-weight: 700;
+}
+
+p.doc-list {
+	font-family: 'Cabin', sans-serif;
+	color: #adadad;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	padding-top: 10px;
+}
+
+h4.doc-skills {
+	font-family: 'Cabin', sans-serif;
+	color: #262c48;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 25px;
+	padding-top: 30px;
+}
+
+/*dropdown hover*/
+.drop {
+    background-color: #fdfdfd;
+    color: #262c48;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 500;
+	font-size: 17px;
+    padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 35px;
+	padding-left: 35px;
+    border: none;
+	border-radius: 10px;
+	border: solid;
+	border-width: 1.5px;
+	border-color: 262c48;
+}
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-drop {
+    display: none;
+    position: absolute;
+    background-color: #fdfdfd;
+    width: 265px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.drop-drop a {
+	color: #adadad;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 500;
+	font-size: 17px;
+    padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 35px;
+	padding-left: 35px;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-drop a:hover {
+	background-color: #adadad;
+}
+
+.drop-down:hover .drop-drop {
+	display: block;
+}
+
+.drop-down:hover .drop {
+	background-color: #262c48;
+	color: #fdfdfd;
+	border: none;
+}
+
+/*dropdown clickable*/
+.click-bn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.click-bn:hover, .click-bn:focus {
+    background-color: #2980B9;
+}
+
+.click-down {
+    position: relative;
+    display: inline-block;
+}
+
+.click-drop {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.click-drop a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.click-down a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+/*CONTACT BANNER*/
+#contact-banner {
+	width: 100%;
+	/*vignette*/
+	top: 0;
+	left: 0;
+	box-shadow: 150px 50px 600px 50px
+	rgba(38,44,72,.4) inset;
+	background: url("media/contact.jpg");
+	background-size: cover;
+	background-position: 50% 90%;
+    background-repeat: no-repeat;
+	padding-bottom: 60px;
+}
+
+#contact-banner h1 {
+	font-family: Amarillo;
+	font-weight: normal;
+	letter-spacing: .2px;
+	color: #fdfdfd;
+	text-align: center;
+	font-size: 50px;
+	padding-top: 60px;
 	padding-bottom: 50px;
 }
 
-#exercises .flex img.exercise {
-	display: block;
-	object-fit: cover;
-	object-position: 55% 0;
-	width: 240px;
-	height: 240px;
-}
-
-/*hover exercises - w3 schools*/
-#exercises .flex .hover {
-	position: relative;
-}
-
-#exercises .flex .overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	opacity: 0;
-	transition: .5s ease;
-}
-
-#exercises .flex .hover:hover .overlay {
-	opacity: 1;
-}
-
-#exercises .flex .name {
-	color: #f3f3f3;
+#contact-banner a.say-hello {
+	text-align: center;
+	text-decoration: none;
+	color: #262c48;
 	font-family: 'Cabin', sans-serif;
 	font-weight: 700;
-	font-size: 24px;
-	text-transform: uppercase;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	text-align: center;
+	font-size: 17px;
+	letter-spacing: 1px;	
+	background-color: #fdfdfd;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 25px;
+	margin-left: 45.5%;
+	text-decoration: none;
 }
 
-/*PROJECTS*/
-#projects {
-	padding-top: 100px;
-	padding-bottom: 125px;
-}
-
-#projects h1 {
-	font-family: 'Cabin', sans-serif;
-	color: #232323;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 35px;
-	text-align: center;
-	padding-bottom: 40px;
-}
-
-#projects .flex {
-	width: 50%;
-	display: flex;
-	justify-content: space-between;
-	margin: 0 auto;
-}
-
-#projects .flex img.project {
-	display: block;
-	object-fit: cover;
-	object-position: 55% 0;
-	width: 375px;
-	height: 425px;
-}
-
-/*hover projects - w3 schools*/
-#projects .flex .hover {
-	position: relative;
-}
-
-#projects .flex .overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	opacity: 0;
-	transition: .5s ease;
-}
-
-#projects .flex .hover:hover .overlay {
-	opacity: 1;
-}
-
-#projects .flex .name {
-	color: #f3f3f3;
-	font-family: 'Cabin', sans-serif;
-	font-weight: 700;
-	font-size: 24px;
-	text-transform: uppercase;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	text-align: center;
-}
-
-/*OUTRO*/
-#outro {
-	margin: 0 auto;
-	background-image: linear-gradient( rgba(0, 4, 48, 0.3), rgba(0, 4, 48, 0.3) ),url("media/fish.jpg");
-	background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-	width: 80%;
-	height: 300px;
-}
-
-#outro h1 {
-	font-family: Amarillo;
-	font-weight: normal;
-	letter-spacing: .2px;
-	color: #f3f3f3;
-	text-align: center;
-	font-size: 50px;
-	padding-top: 90px;
+#contact-banner a.say-hello:hover {
+	border-style: solid;
+	border-width: .5px;
+	border-color: #fdfdfd;
+	color: #fdfdfd;
+	font-weight: 900;
+	background-color: #262c48;
 }
 
 /*FOOTER*/
-#space {
-	padding-top: 125px;
-}
-
 footer {
-	background-color: #232323;
-}
-
-footer #foot {
-	background-color: #232323;
-	height: 100px;
+	width: 100%;
+	background-color: #303030;
+	height: 75px;
 	display: flex;
 	justify-content: space-between;
-	width: 80%;
-	margin: 0 auto;
 }
 
-footer #foot p {
-	padding-top: 45px;
+footer .foot-text {
+	color: #fdfdfd;
 	font-family: 'Cabin', sans-serif;
-	color: #f3f3f3;
-	font-size: 15px;
 	font-weight: 400;
-	letter-spacing: .5px;
+	font-size: 14px;
 }
 
-footer #foot .flex {
-	padding-top: 45px;
-	text-align: right;
-}
-
-footer #foot .flex a {
-	font-family: 'Cabin', sans-serif;
-	color: #f3f3f3;
-	font-size: 15px;
-	text-transform: uppercase;
+footer a.foot {
 	text-decoration: none;
-	padding-left: 20px;
-	font-weight: 700;
-	letter-spacing: .5px;
+	color: #fdfdfd;
+}
+
+footer a.foot:hover {
+	color: #adadad;
 }
