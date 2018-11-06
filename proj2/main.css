@@ -72,8 +72,8 @@ header {
 	justify-content: space-between;
 	height: 100px;
 	background: #fdfdfd;
-	margin-left: 200px;
-	margin-right: 200px;
+	margin-left: 75px;
+	margin-right: 75px;
 }
  
 header nav {
@@ -107,6 +107,22 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 	height: 55px;
 	padding-top: 20px;
 	padding-right: 200px; /*NOTE: Needs this to be centered... Is there a better way to do it?*/
+}
+
+/*nav images*/
+img.be {
+	width: 27px;
+	height: 18px;
+}
+	
+img.link {
+	width: 19px;
+	height: 17px;
+}
+	
+img.vim {
+	width: 20px;
+	height: 18px;
 }
  
 /*INDEX STYLES*/
@@ -143,14 +159,14 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 }
 
 #portfolio .port-content {
-	margin-right: 200px;
-	margin-left: 200px;
+	margin-right: 75px;
+	margin-left: 75px;
 	display: flex;
 	justify-content: space-between;
 }
 
 #portfolio .port-desc {
-	width: 350px;
+	width: 400px;
 }
 
 #portfolio .tabs { /*NOTE: Need to adjust this for javascript*/
@@ -176,21 +192,27 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 	text-decoration: none;
 }
 
+#portfolio a:hover {
+	color: #adadad;
+}
+
 #portfolio img.view { /*NOTE: I need these images to be vectors (svgs) instead --> In index.html there's padding on the images, that will need to be fixed as well*/
 	width: 15px;	  /*NOTE: The circles need to be vectors*/
 	height: 15px;
 	padding-top: 5px;
 }
 
-#portfolio img.display {
-	padding-top: 60px;
+#portfolio img.display1 {
+	padding-top: 80px;
+	width: 675px;
+	height: 468px;
 }
 
 /*additional projects section*/
 .add-proj {
 	padding-top: 60px;
-	padding-left: 200px;
-	padding-right: 200px;
+	padding-left: 75px;
+	padding-right: 75px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -199,7 +221,7 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 	font-family: 'Cabin', sans-serif;
 	text-align: left;
 	padding-left: 60px; 
-	color: #fdfdfd;
+	color: #262c48;
 	font-size: 35px;
 	font-weight: 600;
 	padding-top: 4px;
@@ -211,7 +233,7 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 	font-family: 'Cabin', sans-serif;
 	text-align: left;
 	padding-left: 60px;
-	color: #fdfdfd;
+	color: #262c48;
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -221,11 +243,18 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 /*individual additional projects*/
 .add-proj .fliers {
 	text-decoration: none;
-	background: url("media/contact.jpg");
+	/*vignette*/
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 200px
+	rgba(0,0,0,.3) inset;
+	background: url("media/flier.png");
+	background-color: #fdfdfd;
 	display: block;
 	background-size: cover;
-	background-position: 50% 90%;
+	background-position: 0% 50%;
     background-repeat: no-repeat;
+	background-size: 530px 384px;
 	width: 530px;
 	height: 530px;
 }
@@ -233,29 +262,12 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 .add-proj .fliers:hover {
 	top: 0;
 	left: 0;
-	box-shadow: 0 0 400px rgba(38,44,72,.4) inset;
-}
-
-.add-proj .motion {
-	text-decoration: none;
-	background: url("media/contact.jpg");
-	display: block;
-	background-size: cover;
-	background-position: 50% 90%;
-    background-repeat: no-repeat;
-	width: 530px;
-	height: 530px;
-}
-
-.add-proj .motion:hover {
-	top: 0;
-	left: 0;
-	box-shadow: 0 0 400px rgba(38,44,72,.4) inset;
+	box-shadow: 0 0 400px rgba(38,44,72,.7) inset;
 }
 
 .add-proj .drawings {
 	text-decoration: none;
-	background: url("media/contact.jpg");
+	background: url("media/draw1.jpg");
 	display: block;
 	background-size: cover;
 	background-position: 50% 90%;
@@ -267,24 +279,7 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 .add-proj .drawings:hover {
 	top: 0;
 	left: 0;
-	box-shadow: 0 0 400px rgba(38,44,72,.4) inset;
-}
-
-.add-proj .ui-ux {
-	text-decoration: none;
-	background: url("media/contact.jpg");
-	display: block;
-	background-size: cover;
-	background-position: 50% 90%;
-    background-repeat: no-repeat;
-	width: 530px;
-	height: 530px;
-}
-
-.add-proj .ui-ux:hover {
-	top: 0;
-	left: 0;
-	box-shadow: 0 0 400px rgba(38,44,72,.4) inset;
+	box-shadow: 0 0 400px rgba(38,44,72,.7) inset;
 }
 
 /*contact section*/
@@ -345,20 +340,19 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 #case {
 	background-color: #f3f3f3;
 	width: 100%;
-	height: 600px;
-	padding-bottom: 45px;
+	padding-bottom: 15px;
 	padding-top: 45px;
 }
 
 #case .case-content {
-	margin-right: 200px;
-	margin-left: 200px;
+	margin-right: 75px;
+	margin-left: 75px;
 	display: flex;
 	justify-content: space-between;
 }
 
 #case .case-desc {
-	width: 350px;
+	width: 400px;
 }
 
 #case a {
@@ -382,8 +376,63 @@ header img.logo { /*NOTE: I need these images to be vectors (svgs) instead*/
 	padding-top: 5px;
 }
 
-#case img.display {
+/*case studies more pages*/
+#case img.display2 {
 	padding-top: 60px;
+	width: 675px;
+	height: 468px;
+	padding-bottom: 60px; 
+}
+
+#case img.display3 {
+	padding-top: 60px;
+	width: 650px;
+	height: 497px;
+}
+
+/*web screenshots*/
+#case .case-flex {
+	display: flex;
+	justify-content: center;
+	margin-right: 75px;
+	margin-left: 25px;
+}
+
+#case img.case-screen {
+	display: block;
+	object-fit: cover;
+	object-position: 55% 0;
+	width: 450px;
+	height: 220px;
+	padding-bottom: 45px;
+	padding-left: 50px;
+}
+
+/*flier images*/
+#case .case-fliers {
+	display: flex;
+	justify-content: space-between;
+	margin-right: 75px;
+	margin-left: 75px;
+	padding-top: 60px;
+}
+
+#case img.case-flies {
+	display: block;
+	object-fit: cover;
+	object-position: 55% 0;
+	width: 300px;
+	height: 450px;
+	padding-bottom: 45px;
+}
+
+#case img.case-mid {
+	display: block;
+	object-fit: cover;
+	object-position: 55% 0;
+	width: 310px;
+	height: 375px;
+	padding-bottom: 45px;
 }
 
 /*case study fonts*/
@@ -442,13 +491,13 @@ h3.case-title {
 	width: 460px;
 	height: 400px;
 	margin-top: 60px;
-	margin-right: 200px;
+	margin-right: 75px;
 }
 
 /*about text*/
 #about-content .about-text {
 	padding-right: 100px;
-	margin-left: 200px;
+	margin-left: 75px;
 }
 
 #about-content .about-text .about-header {
@@ -500,7 +549,7 @@ h3.case-title {
 }
 
 #about-content a.about-resume:hover {
-	color: #333399;
+	color: #adadad;
 }
 
 /*CONTACT SECTION*/
@@ -510,8 +559,8 @@ h3.case-title {
 }
 
 #contact-content .contact-padding{
-	margin-right: 400px;
-	margin-left: 400px;
+	margin-right: 250px;
+	margin-left: 250px;
 	padding-bottom: 60px;
 }
 
@@ -532,6 +581,7 @@ h3.case-title {
 	font-weight: 400;
 	line-height: 25px;
 	padding-top: 20px;
+	text-align: center;
 }
 
 #contact-content p.contact-titles {
@@ -632,8 +682,8 @@ h3.case-title {
 }
 
 #resume .resume-content {
-	margin-left: 350px;
-	margin-right: 350px;
+	margin-left: 175px;
+	margin-right: 175px;
 }
 
 /*resume button*/
@@ -646,7 +696,7 @@ h3.case-title {
 #resume .resume-content a.resume-print {
 	display: flex;
 	justify-content: space-between;
-	width: 150px;
+	width: 125px;
 	line-height: 50px;
 	font-weight: 700;
 	font-family: 'Cabin', sans-serif;
@@ -659,7 +709,7 @@ h3.case-title {
 }
 
 #resume .resume-content a.resume-print:hover {
-	color: #333399;
+	color: #adadad;
 }
 
 #resume .resume-content .resume-work {
@@ -770,27 +820,27 @@ h4.resume-skills {
 	padding-top: 30px;
 }
 
-/*CASE STUDIES SECTION*/
+/*DOCUMENTATION SECTION*/
 #doc {
 	background-color: #f3f3f3;
 	padding-bottom: 60px;
 }
 
 #doc .doc-content {
-	margin-left: 350px;
-	margin-right: 350px;
+	margin-left: 250px;
+	margin-right: 250px;
 }
 
 /*doc fonts*/
 #doc a {
 	text-decoration: none;
-	color: #adadad;
-	font-weight: 400;
+	color: #262c48;
+	font-weight: 700;
 }
 
 #doc a:hover {
 	text-decoration: none;
-	color: #262c48;
+	color: #adadad;
 }
 
 h3.doc-title {
@@ -896,7 +946,7 @@ h4.doc-skills {
 	border-radius: 10px;
 	border: solid;
 	border-width: 1.5px;
-	border-color: 262c48;
+	border-color: #262c48;
 }
 
 .drop-down {
@@ -908,7 +958,7 @@ h4.doc-skills {
     display: none;
     position: absolute;
     background-color: #fdfdfd;
-    width: 265px;
+    width: 335px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     z-index: 1;
 }
@@ -955,7 +1005,7 @@ h4.doc-skills {
 	border-radius: 10px;
 	border: solid;
 	border-width: 1.5px;
-	border-color: 262c48;
+	border-color: #262c48;
 }
 
 .click-bn:hover, .click-bn:focus {
@@ -967,13 +1017,14 @@ h4.doc-skills {
 .click-down {
     position: relative;
     display: inline-block;
+	margin-bottom: 20px;
 }
 
 .click-drop {
     display: none;
     position: absolute;
     background-color: #fdfdfd;
-    width: 265px;
+    width: 325px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     z-index: 1;
 }
@@ -1066,13 +1117,626 @@ footer .foot-text {
 	font-family: 'Cabin', sans-serif;
 	font-weight: 400;
 	font-size: 14px;
+	margin-top: 30px;
+	padding-left: 75px;
 }
 
 footer a.foot {
 	text-decoration: none;
 	color: #fdfdfd;
+	margin-top: 30px;
+	padding-right: 75px;
 }
 
 footer a.foot:hover {
 	color: #adadad;
+}
+
+/*PRINTABLE*/
+@media print {
+	/*HEADER SECTION*/
+	header {
+		display: none;
+	}
+	
+	/*RESUME SECTION*/
+	#resume {
+		background-color: #ffffff;
+	}
+
+	#resume .resume-content {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	/*resume button*/
+	#resume .resume-content img.view {
+		display: none;
+	}
+
+	#resume .resume-content a.resume-print {
+		display: none;
+	}
+
+	#resume .resume-content a.resume-print:hover {
+		color: #333399;
+	}
+
+	#resume .resume-content .resume-work .resume-left {
+		padding-right: 100px;
+	}	
+	
+	#resume .resume-content .resume-work .resume-right {
+		width: 330px;
+	}
+
+	/*resume fonts*/
+	#resume a {
+		color: #303030;
+	}
+	
+	h5.resume-position {
+		color: #303030;
+	}
+
+	p.resume-list {
+		color: #303030;
+	}
+	
+	/*CONTACT SECTION*/
+	#contact-banner {
+		display: none;
+	}
+	
+	/*FOOTER SECTION*/
+	footer {
+		display: none;
+	}
+}
+
+/*RESPONSIVE MEDIA QUERY*/
+@media only screen and (max-width: 480px) {
+	/*FONT STYLES*/
+	h1 {
+		letter-spacing: .2px;
+		font-size: 30px;
+		line-height: 40px;
+	}
+	 
+	h2 {
+		font-size: 15px;
+		padding-top: 30px;
+		padding-bottom: 20px;
+		line-height: 0px;
+	}
+
+	h3 {
+		font-size: 30px;
+		padding-top: 25px;
+		font-weight: 600;
+	}
+
+	p.splash-subtitle {
+		font-size: 12px;
+		padding-top: 15px;
+		width: 250px;
+		padding-left: calc((100% - 250px)/2);
+		line-height: 17px;
+	}
+
+	p.portfolio-subtitle {
+		display: none;
+	}
+
+	p.portfolio-desc {
+		display: none;
+	}
+	 
+	/*HEADER & NAV STYLES*/
+	header {
+		height: 75px;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+
+	header nav a {
+		font-size: 12px;
+		line-height: 75px;
+		padding-right: 10px;
+	}
+
+	header .links {
+		padding-top: 25px;
+	} 
+
+	header .links a {
+		padding-left: 25px;
+	}
+
+	header img.logo {
+		display: none;
+	}
+	
+	/*nav images*/
+	img.be {
+		width: 15px;
+		height: 10px;
+	}
+	
+	img.link {
+		width: 11px;
+		height: 10px;
+	}
+	
+	img.vim {
+		width: 12px;
+		height: 10px;
+	}
+	 
+	/*INDEX STYLES*/
+	/*splash section*/
+	#splash {
+		width: 100%;
+		height: 200px;
+		background-size: 350px 425px;
+	}
+
+	/*portfolio section*/
+	#portfolio {
+		height: 370px;
+		padding-bottom: 20px;
+		padding-top: 20px;
+	}
+
+	#portfolio .port-content {
+		margin-right: 25px;
+		margin-left: 25px;
+		flex-direction: column-reverse;
+	}
+
+	#portfolio .port-desc {
+		width: 200px;
+	}
+
+	#portfolio a {
+		width: 80px;
+		font-size: 12px;
+		padding-top: 0px;
+		font-weight: 700;
+		line-height: 25px;
+	}
+
+	#portfolio img.view {
+		width: 11px;
+		height: 11px;
+		padding-top: 7px;
+	}
+
+	#portfolio img.display1 {
+		padding-top: 20px;
+		width: 360px;
+		height: 240px;
+	}
+
+	/*additional projects section*/
+	.add-proj {
+		padding-top: 30px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	.add-proj h4 {
+		padding-left: 20px;
+		padding-top: 4px;
+		padding-bottom: 3px;
+		padding-top: 125px;
+		font-size: 17px;
+	}
+
+	.add-proj h5 {
+		padding-left: 20px;
+		font-size: 10px;
+		font-weight: 700;
+		letter-spacing: .5px;
+	}
+
+	/*individual additional projects*/
+	.add-proj .fliers {
+		background-size: 175px 130px;
+		width: 175px;
+		height: 175px;
+	}
+
+	.add-proj .drawings {
+		width: 175px;
+		height: 175px;
+	}
+
+	/*contact section*/
+	#index-contact{
+		margin-top: 30px;
+		padding-bottom: 60px;
+	}
+
+	#index-contact h1 {
+		font-size: 25px;
+		padding-top: 60px;
+		padding-bottom: 30px;
+	}
+
+	#index-contact a.say-hello {
+		font-size: 12px;
+		padding-left: 35px;
+		padding-right: 35px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 25px;
+		margin-left: calc((100% - 110px)/2);
+		text-decoration: none;
+	}
+	
+	/*CASE STUDIES SECTION*/
+	#case {
+		padding-bottom: 30px;
+		padding-top: 40px;
+	}
+
+	#case .case-content {
+		margin-right: 25px;
+		margin-left: 25px;
+		flex-direction: column-reverse;
+	}
+
+	#case .case-desc {
+		width: 100%;
+		padding-bottom: 20px;
+	}
+
+	/*case studies more pages*/
+	#case img.display2 {
+		padding-top: 0px;
+		width: 325px;
+		height: 235px;
+		margin-left: calc((100% - 325px)/2);
+	}
+
+	#case img.display3 {
+		padding-top: 0px;
+		margin-left: calc((100% - 365px)/2);
+		width: 375px;
+		height: 275px;
+	}
+
+	/*web screenshots*/
+	#case .case-flex {
+		flex-direction: column;
+		margin-right: 25px;
+		margin-left: 25px;
+	}
+
+	#case img.case-screen {
+		width: 100%;
+		height: 175px;
+		padding-bottom: 15px;
+	}
+
+	/*flier images*/
+	#case .case-fliers {
+		flex-direction: column;
+		margin-right: 25px;
+		margin-left: 25px;
+		padding-top: 0px;
+	}
+
+	#case img.case-flies {
+		width: 100%;
+		height: 500px;
+		padding-bottom: 15px;
+	}
+
+	#case img.case-mid {
+		width: 100%;
+		height: 425px;
+		padding-bottom: 15px;
+	}
+
+	/*case study fonts*/
+	p.case-subtitle {
+		font-size: 15px;
+	}
+
+	p.case-desc {
+		font-size: 12px;
+		padding-top: 15px;
+		line-height: 20px;
+	}
+
+	h3.case-title {
+		font-size: 30px;
+		padding-top: 25px;
+		font-weight: 600;
+	}
+
+	/*drawing section*/
+	.draw {
+		flex-direction: column;
+		padding-bottom: 0px;
+	}
+
+	.draw .draw-img {
+		width: 100%;
+		height: calc(100vw - 50px);
+		padding-left: 0px;
+		padding-bottom: 0px;
+		padding-top: 15px;
+	}
+	
+	/*ABOUT SECTION*/
+	/*about content*/
+	#about-content {
+		flex-direction: column-reverse;
+		padding-bottom: 40px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	#about-content .about-image {
+		width: 100%;
+		height: calc(100vw * .75);
+		margin-top: 40px;
+		margin-right: 0px;
+	}
+
+	/*about text*/
+	#about-content .about-text {
+		padding-right: 0px;
+		margin-left: 0px;
+		width: 100%;
+	}
+
+	#about-content .about-text .about-header {
+		font-size: 30px;
+		font-weight: 600;
+		padding-top: 60px;
+	}
+
+	#about-content .about-text .about-subtitle {
+		font-size: 12px;
+	}
+
+	#about-content .about-text .about-p {
+		font-size: 12px;
+		padding-top: 20px;
+		line-height: 20px;
+	}
+
+	/*resume button*/
+	#about-content img.view {
+		width: 11px;
+		height: 11px;
+		padding-top: 7px;
+	}
+
+	#about-content a.about-resume {
+		width: 90px;
+		font-size: 12px;
+		padding-top: 16px;
+		font-weight: 700;
+		line-height: 25px;
+	}
+	
+	/*CONTACT SECTION*/
+	#contact-content {
+		background-color: #f3f3f3;
+		height: 100%;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+
+	#contact-content .contact-padding{
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-bottom: 40px;
+	}
+
+	#contact-content h6 {
+		font-size: 25px;
+		padding-top: 40px;
+	}
+
+	#contact-content p.contact-desc {
+		font-size: 12px;
+		line-height: 20px;
+		padding-top: 0px;
+	}
+
+	#contact-content p.contact-titles {
+		font-size: 12px;
+		line-height: 20px;
+		padding-top: 30px;
+	}
+
+	#contact-content .line-input {
+		margin-top: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		font-size: 12px;
+		line-height: 0px;
+		padding-top: 10px;
+		width: calc(100% - 12px);
+	}
+
+	#contact-content .full-input {
+		margin-top: 10px;
+		padding-top: 10px;
+		height: 100px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-width: 1.5px;
+		margin-bottom: 20px;
+		font-size: 12px;
+		line-height: 20px;
+		padding-top: 10px;
+		width: calc(100% - 25px);
+	}
+
+	#contact-content .line-input:focus {
+		border-width: 1.25px;
+	}
+
+	#contact-content .full-input:focus {
+		border-width: 1.25px;
+	}
+
+	#contact-content .message {
+		font-size: 12px;
+		padding-left: 35px;
+		padding-right: 35px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 25px;
+		margin-left: calc((100% - 95px)/2);
+		text-decoration: none;
+	}
+	
+	/*RESUME SECTION*/
+	#resume {
+		padding-right: 25px;
+		padding-left: 25px;
+		padding-bottom: 30px;
+	}
+
+	#resume .resume-content {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	/*resume button*/
+	#resume .resume-content img.view {
+		width: 11px;
+		height: 11px;
+		padding-top: 7px;
+		padding-bottom: 20px;
+	}
+
+	#resume .resume-content a.resume-print {
+		width: 90px;
+		font-size: 12px;
+		padding-top: 5px;
+		font-weight: 700;
+		line-height: 25px;
+	}
+
+	#resume .resume-content .resume-work {
+		flex-direction: column;
+	}
+
+	#resume .resume-content .resume-work .resume-left {
+		width: 100%;
+	}
+	
+	#resume .resume-content .resume-work .resume-right {
+		width: 100%;
+		padding-bottom: 30px;
+	}
+
+	/*resume fonts*/
+	h3.resume-title {
+		font-size: 40px;
+		padding-top: 40px;
+	}
+
+	h2.resume-subheader {
+		font-size: 25px;
+		text-align: left;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		line-height: 30px;
+	}
+	
+	/*DOCUMENTATION SECTION*/
+	#doc {
+		padding-bottom: 30px;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+	
+	#doc .doc-title {
+		font-size: 40px;
+		padding-bottom: 10px;
+		padding-top: 40px;
+	}
+
+	#doc .doc-content{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	
+	#doc .doc-content .doc-work .doc-left {
+		width: 100%;
+	}
+
+	/*dropdown hover - assistance from w3schools*/
+	.drop-down {
+		margin-bottom: 15px;
+	}
+	
+	.drop {
+		width: calc(100% + 25px);
+	}
+	
+	.drop-drop {
+		width: calc(100% + 25px);
+	}
+
+	.click-down {
+		width: 100%;
+	}
+	
+	.click-bn {
+		width: 100%;
+	}
+	
+	.click-drop {
+		width: 100%;
+	}
+	
+	/*CONTACT BANNER*/
+	#contact-banner {
+		margin-top: 0px;
+		padding-bottom: 60px;
+	}
+
+	#contact-banner h1 {
+		font-size: 25px;
+		padding-top: 60px;
+		padding-bottom: 30px;
+	}
+
+	#contact-banner a.say-hello {
+		font-size: 12px;
+		padding-left: 35px;
+		padding-right: 35px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 25px;
+		margin-left: calc((100% - 110px)/2);
+		text-decoration: none;
+	}
+	
+	/*FOOTER*/
+	footer {
+		height: 75px;
+	}
+
+	footer p.foot-text {
+		font-size: 12px;
+		padding-left: 25px;
+		margin-top: 30px;
+	}
+	
+	footer a.foot {
+		padding-right: 25px;
+	}
 }

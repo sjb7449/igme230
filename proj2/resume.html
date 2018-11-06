@@ -17,9 +17,9 @@
 			</nav>
 			<a href="index.html"><img class="logo" src="media/logo.png" alt="logo"/></a>
 			<div class="links">
-				<a href="#"><img src="media/behance.png" alt="Behance" width="27" height="18"/></a>
-				<a href="#"><img src="media/linkedin.png" alt="LinkedIn" width="19" height="17"/></a>
-				<a href="#"><img src="media/vimeo.png" alt="Vimeo" width="20" height="18"/></a>
+				<a href="#"><img class="be" src="media/behance.png" alt="Behance" /></a>
+				<a href="#"><img class="link" src="media/linkedin.png" alt="LinkedIn" /></a>
+				<a href="#"><img class="vim" src="media/vimeo.png" alt="Vimeo" /></a>
 			</div>
 		</header>
 		
@@ -27,23 +27,23 @@
 		<div id="resume">
 			<div class="resume-content">
 				<h3 class="resume-title">Resume</h3>
-				<a href="#" class="resume-print">printable version<img class="view" src="media/arrow-view-blue.png" alt=" "/></a>
+				<a href="#" class="resume-print" onclick="printResume()">print resume<img class="view" src="media/arrow-view-blue.png" alt=" "/></a>
 				<!--work experience-->
 				<div class="resume-work">
 					<div class="resume-left">
 						<h2 class="resume-subheader">Experience</h2>
 						
-						<h4 class="resume-subtitle">Wegmans</h4>
+						<h4 class="resume-subtitle">Head Designer</h4>
+						<h5 class="resume-position">OCCS | Rochester, NY | Fall 2018 - Present</h5>
+						<p class="resume-desc">I've worked as the head designer for Off-Campus and Commuter Services at Rochester Institute of Technology for close to three years now. I've designed their official banner, all their fliers, and they're instructional website, Educated Renter's Program.</p>
+						
+						<h4 class="resume-subtitle">Senior Communter Ambassador</h4>
+						<h5 class="resume-position">OCCS | Rochester, NY | Fall 2016 - Present</h5>
+						<p class="resume-desc">As Senior Commuter Ambassador, I'm in charge of all other Commuter Ambassadors who work for OCCS, and I plan all events the organization hosts. In this position, I work with other organization heads in order to effectively plan successful events.</p>
+						
+						<h4 class="resume-subtitle">Wegmans's Employee</h4>
 						<h5 class="resume-position">Fairmount, NY | August 2014 - Present</h5>
-						<p class="resume-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						
-						<h4 class="resume-subtitle">OCCS @ RIT</h4>
-						<h5 class="resume-position">Head Designer | Rochester, NY | Fall 2016 - Present</h5>
-						<p class="resume-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						
-						<h4 class="resume-subtitle">OCCS @ RIT</h4>
-						<h5 class="resume-position">Senior CA | Rochester, NY | Fall 2018 - Present</h5>
-						<p class="resume-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						<p class="resume-desc">I've worked numerous positions at Wegmans Food Market including as a cashier, deli worker, and sub shop employee. Throughout my years at Wegmans, I've learned how to competently work with multiple different personalities and how to demonstrate patience when working with customers.</p>
 					</div>
 					
 					<!--education/skills-->
@@ -60,7 +60,7 @@
 						<p class="resume-list">HTML/CSS</p>
 						
 						<h4 class="resume-skills">Contact Info.</h4>
-						<p class="resume-list">Email: <a href="mailto:sjb7449@rit.edu">sjb7449@rit.edu</a></p>
+						<p class="resume-list">Email: <a href="mailto:sjb7449@rit.edu" class="last">sjb7449@rit.edu</a></p>
 					</div>
 				</div>
 			</div>
@@ -74,8 +74,16 @@
 		
 		<!--FOOTER SECTION-->
 		<footer>
-			<p class="foot-text" style="margin-left: 200px; margin-top: 30px;">&copy; 2018 Samantha Burke</p>
-			<p class="foot-text" style="margin-right: 200px; margin-top: 30px;"><a href="document.html" class="foot">Design Document</a></p>
+			<p class="foot-text">&copy; 2018 Samantha Burke</p>
+			<p class="foot-text"><a href="document.html" class="foot">Design Document</a></p>
 		</footer>
+		
+		<!--JAVASCRIPT-->
+		<script>
+			/*print resume*/
+			function printResume() {
+				window.print();
+			}
+		</script>
 	</body>
 </html>

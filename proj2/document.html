@@ -5,28 +5,6 @@
 		<title>Samantha Burke</title>
         <link rel="stylesheet" href="main.css">
 		<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <script>
-		/*function for clickable dropdown menu -  - assistance from w3schools*/
-		/*once the button is click, the menu will drop down*/
-		function dropDown() {
-			document.getElementById("dropList").classList.toggle("show");
-		}
-
-		/*this will close the menu once the button is clicked again*/
-		window.onclick = function(event) {
-			if (!event.target.matches('.click-bn')) {
-				var dropbn = document.getElementsByClassName("click-drop");
-				var i;
-				for (i = 0; i < dropbn.length; i++) {
-					var dropDown = dropbn[i];
-					if (dropDown.classList.contains('show')) {
-						dropDown.classList.remove('show');
-					}
-				}
-		  }
-		}
-	</script>
-	
 	</head>
 	<body>
 		<!--HEADER & NAVIGATION SECTION-->
@@ -39,9 +17,9 @@
 			</nav>
 			<a href="index.html"><img class="logo" src="media/logo.png" alt="logo"/></a>
 			<div class="links">
-				<a href="#"><img src="media/behance.png" alt="Behance" width="27" height="18"/></a>
-				<a href="#"><img src="media/linkedin.png" alt="LinkedIn" width="19" height="17"/></a>
-				<a href="#"><img src="media/vimeo.png" alt="Vimeo" width="20" height="18"/></a>
+				<a href="#"><img class="be" src="media/behance.png" alt="Behance" /></a>
+				<a href="#"><img class="link" src="media/linkedin.png" alt="LinkedIn" /></a>
+				<a href="#"><img class="vim" src="media/vimeo.png" alt="Vimeo" /></a>
 			</div>
 		</header>
 		
@@ -52,49 +30,46 @@
 				<!--pages-->
 				<div class="doc-work">
 					<div class="doc-left">
-						<h2 class="doc-subheader">Web Pages</h2>
+						<h2 class="doc-subheader">Individual Page Details</h2>
 						
 						<h4 class="doc-subtitle">Home/Index</h4>
-						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						<p class="doc-desc">For the home page, I used free mockup images of phones and laptops from the site <a href="https://www.mockupworld.co/" target="_blank">Mockup World</a>. The image used for the "Let's keep in touch!" banner, which can be found at the bottom of every page, was taken from <a href="https://unsplash.com/" target="_blank">Unsplash</a>. My index.html is also my <i>gallery page</i> as discussed in previous office hours.</p>
 						
 						<h4 class="doc-subtitle">About</h4>
-						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						<p class="doc-desc">As discussed in office hours, I opted to have my image and a brief description about myself to be listed on a different page from my index.html. This page includes both an image of my face and a little blurb about me.</p>
 						
 						<h4 class="doc-subtitle">Contact</h4>
-						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						<p class="doc-desc">So, obviously this contact form doesn't store the user's data upon pressing "submit" because I have no database to store said information. Instead, the code here is just meant to act as a sort of prototype, giving an idea of how my ideal contact form would look and (sorta) behave. I had to look at form examples from <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">W3Schools</a> to get a better understanding of how they function.</p>
 						
-						<h4 class="doc-subtitle">doc</h4>
-						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						<h4 class="doc-subtitle">Resume</h4>
+						<p class="doc-desc">For my resume, I refered to <a href="https://joshuawinn.com/css-print-media-query/" target="_blank">this article</a> to learn how to properly code a print media query. I also list my email here as a form of contact information.</p>
 						
 						<h4 class="doc-subtitle">Project Information Pages</h4>
-						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						<p class="doc-desc">All mockup images are taken from <a href="https://www.mockupworld.co/" target="_blank">Mockup World</a> with my work pasted on their screens.</p>
 					
-						<h2 class="doc-subheader">Other Info.</h2>
+						<h2 class="doc-subheader">Other Aspects</h2>
 						<h4 class="doc-subtitle">Navigation</h4>
-						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						<h4 class="doc-subtitle">Navigation</h4>
-						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						<p class="doc-desc">In my navigation, the Behance, LinkIn, and Vimeo are all accounts I plan to make over the winter break; therefore, they do not link to anything currently. However, in the future, they would.</p>
 						
 						<h4 class="doc-subtitle">Dropdown Menu</h4>
-						<p class="doc-desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-							<!--dropdown hover-->
-							<div class="drop-down">
-								<button class="drop">Documentation Navigation</button>
-								<div class="drop-drop">
-									<a href="#">Top of Page</a>
-									<a href="#doc">Content Section</a>
-									<a href="#contact-banner">Contact Section</a>
-								</div>
+						<p class="doc-desc">I couldn't find anywhere on the site where I felt a dropdown menu would work with my design, so I included one here so that I could still get credit for having one on my site. I used two W3Schools tutorials to assist me in this: <a href="https://www.w3schools.com/css/css_dropdowns.asp" target="_blank">here</a> and <a href="https://www.w3schools.com/howto/howto_js_dropdown.asp" target="_blank">here</a>. The hoverable dropdown menu is for viewers on a desktop, and the clickable dropdown is for those visiting the site on their mobile devices.</p>
+						<!--dropdown hover-->
+						<div class="drop-down">
+							<button class="drop">Documentation Navigation on Hover</button>
+							<div class="drop-drop">
+								<a href="#">Top of Page</a>
+								<a href="#doc">Content Section</a>
+								<a href="#contact-banner">Contact Section</a>
 							</div>
+						</div>
 							
-							<!--dropdown hover-->
-							<div class="click-down">
-								<button onclick="dropDown()" class="click-bn">Dropdown</button>
-								<div id="dropList" class="click-drop">
-									<a href="#">Top of Page</a>
-									<a href="#doc">Content Section</a>
-									<a href="#contact-banner">Contact Section</a>
-								</div>
+						<!--dropdown click-->
+						<div class="click-down">
+							<button onclick="dropDown()" class="click-bn">Documentation Navigation on Click</button>
+							<div id="dropList" class="click-drop">
+								<a href="#">Top of Page</a>
+								<a href="#doc">Content Section</a>
+								<a href="#contact-banner">Contact Section</a>
 							</div>
 						</div>
 					</div>
@@ -110,8 +85,31 @@
 		
 		<!--FOOTER SECTION-->
 		<footer>
-			<p class="foot-text" style="margin-left: 200px; margin-top: 30px;">&copy; 2018 Samantha Burke</p>
-			<p class="foot-text" style="margin-right: 200px; margin-top: 30px;"><a href="document.html" class="foot">Design Document</a></p>
+			<p class="foot-text">&copy; 2018 Samantha Burke</p>
+			<p class="foot-text"><a href="document.html" class="foot">Design Document</a></p>
 		</footer>
+		
+		<!--JAVASCRIPT-->
+		<script>
+			/*function for clickable dropdown menu -  - assistance from w3schools*/
+			/*once the button is click, the menu will drop down*/
+			function dropDown() {
+				document.getElementById("dropList").classList.toggle("show");
+			}
+
+			/*this will close the menu once the button is clicked again*/
+			window.onclick = function(event) {
+				if (!event.target.matches('.click-bn')) {
+					var dropbn = document.getElementsByClassName("click-drop");
+					var i;
+					for (i = 0; i < dropbn.length; i++) {
+						var dropDown = dropbn[i];
+						if (dropDown.classList.contains('show')) {
+							dropDown.classList.remove('show');
+						}
+					}
+			  }
+			}
+		</script>
 	</body>
 </html>
