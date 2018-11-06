@@ -1412,12 +1412,18 @@ footer a.foot:hover {
 		flex-direction: column;
 		margin-right: 25px;
 		margin-left: 25px;
+		padding-right: 0px;
+		padding-left: 0px;
 	}
 
 	#case img.case-screen {
 		width: 100%;
 		height: 175px;
 		padding-bottom: 15px;
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-right: 0px;
+		padding-left: 0px;
 	}
 
 	/*flier images*/
