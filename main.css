@@ -178,7 +178,6 @@ header img.logo {
 #exercises .list-exercises {
 	display: flex;
 	flex-direction: column;
-	width: 
 }
 
 #exercises .list-exercises p {
@@ -257,8 +256,6 @@ header img.logo {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
