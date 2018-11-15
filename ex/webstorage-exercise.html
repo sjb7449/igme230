@@ -23,7 +23,7 @@
 
     <div>
         What is your favorite color? &rightarrow;
-        <select id="colorSelect" onchange="changeBackgroundColor()> <!--Change the background onchange-->
+        <select id="colorSelect"> <!--Previously had: <select id="colorSelect" onchange="changeBackgroundColor()> -->
             <option value="red">Red</option>
             <option value="green">Green</option>
             <option value="blue">Blue</option>
@@ -60,14 +60,10 @@
     // if we find a previously set color value, display it
     if (storedColor) {
         colorSelect.querySelector(`option[value='${storedColor}']`).selected = true;
+        document.querySelector('body').style.backgroundColor = storedColor;
     }
-
-    /* This part of the script is triggered by user actions  */
-    // when the user changes their name or color, update localStorage
-    nameField.onchange = e => { localStorage.setItem(nameKey, e.target.value); };
-    colorSelect.onchange = e => { localStorage.setItem(colorKey, e.target.value); };
-
-	/*ATTEMPT AT EXERCISE*/
+	
+	/*FIRST ATTEMPT AT EXERCISE
 	//function to change the background
 	function changeBackgroundColor(){
 		doument.body.style.backgroundColor = document.getElementById("colorSelect").value;
@@ -104,7 +100,15 @@
 	
 	else if(storedColor == "red"){
 		document.body.style.backgroundColor = "red";
-	}
+	}*/
+	
+    /* This part of the script is triggered by user actions  */
+    // when the user changes their name or color, update localStorage
+    nameField.onchange = e => { localStorage.setItem(nameKey, e.target.value); };
+    colorSelect.onchange = e => { localStorage.setItem(colorKey, e.target.value); 
+								  document.querySelector('body').style.backgroundColor = e.target.value;};	
+	
+	
 </script>
 </body>
 
