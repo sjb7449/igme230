@@ -175,6 +175,29 @@ header img.logo {
 	padding-bottom: 40px;
 }
 
+#exercises .list-exercises {
+	display: flex;
+	flex-direction: column;
+	width: 
+}
+
+#exercises .list-exercises p {
+	text-align: center;
+}
+
+#exercises .list-exercises a {
+	text-decoration: none;
+	color: #f3f3f3;
+	font-family: 'Cabin', sans-serif;
+	font-size: 15px;
+	line-height: 35px;
+	text-align: center;
+}
+
+#exercises .list-exercises a:hover {
+	font-weight: 900;
+}
+
 /*PROJECTS*/
 #projects {
 	padding-top: 100px;
