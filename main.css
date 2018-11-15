@@ -175,56 +175,6 @@ header img.logo {
 	padding-bottom: 40px;
 }
 
-#exercises .flex {
-	width: 50%;
-	display: flex;
-	justify-content: space-between;
-	margin: 0 auto;
-	padding-bottom: 50px;
-}
-
-#exercises .flex img.exercise {
-	display: block;
-	object-fit: cover;
-	object-position: 55% 0;
-	width: 240px;
-	height: 240px;
-}
-
-/*hover exercises - w3 schools*/
-#exercises .flex .hover {
-	position: relative;
-}
-
-#exercises .flex .overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	opacity: 0;
-	transition: .5s ease;
-}
-
-#exercises .flex .hover:hover .overlay {
-	opacity: 1;
-}
-
-#exercises .flex .name {
-	color: #f3f3f3;
-	font-family: 'Cabin', sans-serif;
-	font-weight: 700;
-	font-size: 24px;
-	text-transform: uppercase;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	text-align: center;
-}
-
 /*PROJECTS*/
 #projects {
 	padding-top: 100px;
