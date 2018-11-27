@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<title>Samantha Burke</title>
+        <link rel="stylesheet" href="main.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<style>
+	body {
+		background-color: #f3f3f3;
+	}
+	
+	#contact-content {
+		background-color: #f3f3f3;
+		height: 100%;
+	}
+
+	#contact-content .contact-padding{
+		margin-right: 500px;
+		margin-left: 500px;
+	}
+
+	#contact-content p.contact-desc {
+		font-family: 'Roboto', sans-serif;
+		color: #EE2E74;
+		font-size: 16px;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	#contact-content p.contact-titles {
+		font-family: 'Roboto', sans-serif;
+		color: #EE2E74;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding-top: 30px;
+	}
+
+	#contact-content .line-input {
+		width: 100%;
+		margin-top: 10px;
+		padding-top: 10px;
+		padding-bottom: 15px;
+		padding-left: 20px;
+		border-radius: 5px;
+		background-color: #f3f3f3;
+		border: solid;
+		border-color: #adadad;
+		border-width: 1.5px; 
+		outline: none;
+		font-family: 'Roboto', sans-serif;
+		color: #EE2E74;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 10px;
+		padding-top: 15px;
+	}
+
+	#contact-content .full-input {
+		width: 100%;
+		margin-top: 10px;
+		padding-top: 15px;
+		height: 100px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 5px;
+		background-color: #f3f3f3;
+		border: solid;
+		border-color: #adadad;
+		border-width: 1.5px;
+		margin-bottom: 40px;
+		outline: none;
+		white-space: pre-wrap;
+		font-family: 'Roboto', sans-serif;
+		color: #EE2E74;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 25px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	#contact-content .line-input:focus {
+		border-color: #EE2E74;
+		border-width: 2px;
+	}
+
+	#contact-content .full-input:focus {
+		border-color: #EE2E74;
+		border-width: 2px;
+	}
+
+	#contact-content .message {
+		text-align: center;
+		text-decoration: none;
+		color: #fdfdfd;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 700;
+		font-size: 17px;	
+		background-color: #EE2E74;
+		padding-left: 35px;
+		padding-right: 35px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 25px;
+		margin-left: 45.5%;
+		text-decoration: none;
+		outline: none;
+		border: none;
+	}
+
+	#contact-content .message:hover {
+		border-style: solid;
+		border-width: 1.5px;
+		border-color: #EE2E74;
+		color: #EE2E74;
+		font-weight: 900;
+		background-color: #f3f3f3;
+	}
+	</style>
+	</head>
+	<body>
+		<div id="contact-content">
+			<div class="contact-padding">
+				<p class="contact-titles">full name</p>
+				<input class="line-input" type="text" name="fname" placeholder="You're full name here">
+				<p class="contact-titles">email</p>
+				<input class="line-input" type="text" name="email" placeholder="You're email here">
+				<p class="contact-titles">who are you?</p>
+				<input class="line-input" type="text" name="lname" placeholder="Are you a freelance client, employer, someone else?">
+				<p class="contact-titles">message</p>
+				<textarea class="full-input" placeholder="You're message here"></textarea>
+				<a href="form.html" class="message">Submit</a>
+			</div>
+		</div>
+	</body>
+</html>
