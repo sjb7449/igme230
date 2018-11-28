@@ -202,6 +202,10 @@ header img.logo {
 	font-weight: 900;
 }
 
+strike {
+	color: #f3f3f3;
+}
+
 /*PROJECTS*/
 #projects {
 	padding-top: 100px;
