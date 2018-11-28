@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Week 11 Example from CodePen</title>
+		<link rel="stylesheet" href="main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+		<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+		
+		<!--CSS STYLING-->
+		<style>
+			#panel1,
+			#panel2 {
+			  background-color: pink;
+			  height: 200px;
+			  width: 200px;
+			  margin: 2em;
+			}
+
+			#panels {
+			  display: flex;
+			}
+		</style>
+	</head>
+	<body>
+	<button id="show1">show panel 1</button> <button id="hide1">hide panel 1 </button> <button id="toggle2">toggle panel 2</button>
+
+	<div id="panels">
+	  <div id="panel1">
+		I have text here.
+	  </div>
+
+	  <div id="panel2">
+		There's more text here.
+	  </div>
+	</div>
+	
+	<!--SCRIPT-->
+	<script>
+		/* jQuery added via CodePen settings */
+		$("#hide1").click(function(){
+			$("#panel1").hide();
+		});
+
+		$("#show1").click(function(){
+			$("#panel1").show();
+		});
+
+		$("#toggle2").click(function(){
+		  $("#panel2").toggle()
+		})
+	</script>
+	</body>
+</html>
