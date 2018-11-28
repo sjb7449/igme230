@@ -181,6 +181,11 @@ header img.logo {
 }
 
 #exercises .list-exercises p {
+	text-decoration: none;
+	color: #f3f3f3;
+	font-family: 'Cabin', sans-serif;
+	font-size: 15px;
+	line-height: 35px;
 	text-align: center;
 }
 
