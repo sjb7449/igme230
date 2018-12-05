@@ -1,0 +1,112 @@
+/*********************************
+General Formatting (Do Not Change)
+*********************************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: #86af49;
+}
+
+nav,
+aside,
+article {
+    padding: .5rem;
+}
+
+nav, aside {
+    background-color: #b5e7a0;
+}
+
+
+/**************
+Your Formatting
+***************/
+
+/*DESKTOP*/
+#wrapper {
+    display: grid; /*display wrapper div as a grid*/
+    width: 90vw; /*90% viewport width*/
+    max-width: 1200px; /*min-width is 1200px*/
+    min-height: 100vw; /*min-height is 100% of the viewport height*/
+    grid-template-rows: 4rem 1fr 3rem; /*row heights*/
+    grid-template-columns: 1fr 2fr 200px; /*column widths*/
+    grid-template-areas:
+        "header header header"
+        "aside article nav"
+        "footer footer footer"; /*what the rows hold*/
+}
+
+header {
+    grid-area: header;
+    
+    /*flexbox to center the header horizontally and vertically*/
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+    
+nav {
+    grid-area: nav;
+}
+
+.menuitem {
+    background-color: white; /*white background*/
+    margin: 0; /*no margins*/
+    border: 1px solid #b5e7a0; /*border*/
+}
+
+.submenu {
+    list-style-type: none; /*no bullets*/
+    margin: 0; /*no margins*/
+    padding: 0; /*no padding*/
+    display: none; /*submenu is hidden on load*/
+}
+
+.submenu li {
+    padding-left: .25rem; /*left padding of .25rem*/
+    background-color: lightgray; /*background color of light gray*/
+}
+    
+article {
+    grid-area: article;
+}
+    
+aside {
+    grid-area: aside;
+}
+    
+footer {
+    grid-area: footer;
+    
+    /*flexbox to center the footer horizontally and vertically*/
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 600px){
+    /*mobile grid layout*/
+    #wrapper {
+        grid-template-columns: 1fr; /*one column that uses all horizontal space*/
+        grid-template-rows: auto; /*rows automatically generate*/
+        width: 100vw; /*grid takes up 100% of the viewport width*/
+        grid-template-areas: "header" "nav" "article" "aside" "footer"; /*row order of elements*/
+    }
+}
