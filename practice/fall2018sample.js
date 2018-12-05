@@ -12,7 +12,7 @@ let myContent = "content1.txt";
 $("#choose-content").val(myContent); //changes the menu option to my name and the date by default
 $("#content").load(myContent); //changes the #content to my name and the date
 
-$("#choose-menu").change(function(){
+$("#choose-content").change(function(){
     myContent = $(this).val();
     $("#content").load(myContent);
 })
