@@ -43,13 +43,15 @@ Your Formatting
     display: grid; /*display wrapper div as a grid*/
     width: 90vw; /*90% viewport width*/
     max-width: 1200px; /*min-width is 1200px*/
-    min-height: 100vw; /*min-height is 100% of the viewport height*/
+    min-height: 100vh; /*min-height is 100% of the viewport height*/
     grid-template-rows: 4rem 1fr 3rem; /*row heights*/
     grid-template-columns: 1fr 2fr 200px; /*column widths*/
     grid-template-areas:
         "header header header"
         "aside article nav"
         "footer footer footer"; /*what the rows hold*/
+    
+    margin: auto; /*center that stuff boi*/
 }
 
 header {
