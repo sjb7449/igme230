@@ -64,7 +64,7 @@ nav {
     grid-area: nav;
     background-color: lavenderblush;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
