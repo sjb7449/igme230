@@ -1,0 +1,122 @@
+/*****************
+General Formatting
+******************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+article,
+aside {
+    padding: .5rem;
+}
+
+#extracredit {
+    width: 75%;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid darkgreen;
+}
+
+
+/**************
+Your Formatting
+***************/
+/*DESKTOP*/
+#yourgrid {
+    width: 90vw;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-rows: 75px 30px 1fr 2fr 50px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "header header header header header"
+        "nav nav nav nav nav"
+        "aside aside article article article"
+        "credit credit article article article"
+        "footer footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    grid-area: nav;
+    background-color: lavenderblush;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    width: 6rem;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+}
+
+.items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: #ddd;
+}
+
+.items li {
+    padding: .25rem;
+    background-color: #ddd;
+}
+
+article {
+    grid-area: article;
+    background-color: lightcyan;
+}
+
+aside {
+    grid-area: aside;
+    background-color: lightblue;
+}
+
+#extracredit {
+    grid-area: credit;
+    background-color: lightblue;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 600px) {
+    #yourgrid {
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 30px auto auto auto 30px;
+        grid-template-areas: "header" "nav" "article" "aside" "credit" "footer";
+    }
+}
