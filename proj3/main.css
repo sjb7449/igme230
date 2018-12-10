@@ -151,6 +151,11 @@ body {
     height: 250px;
 }
 
+/*when hover over the image, turn the cursor to a hand*/
+#page1 img:hover{
+    cursor: pointer;
+}
+
 .content {
     grid-area: descr;
     font-family: Roboto;
@@ -339,6 +344,7 @@ body {
   animation-iteration-count: infinite;
 }
 
+/*wiggle animation*/
 @keyframes hovering {
   0% { transform: translate(2px, 3px) rotate(0deg); }
   20% { transform: translate(-2px, 2px) rotate(1deg); }
@@ -352,4 +358,33 @@ body {
 #page3 {
     display: flex;
     
+}
+
+/*FOOTER*/
+footer {
+    background-color: #444;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p {
+    font-family: Roboto;
+    color: #f3f3f3;
+    font-size: 16px;
+    padding-left: 100px;
+}
+
+footer a {
+    font-family: Roboto;
+    color: #f3f3f3;
+    font-size: 16px;
+    text-decoration: none;
+    padding-right: 100px;
+}
+
+footer a:hover {
+    font-weight: 600;
+    text-decoration: underline;
 }
