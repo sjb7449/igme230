@@ -26,7 +26,7 @@
                 </div>
                 <h3>Scroll down</h3>
                 <h2>The benefits of</h2>
-                <h1>A Plant Based Diet</h1>
+                <h1>A <span class="impt">Plant </span>Based Diet</h1>
             </div>
         </div>
         
@@ -83,7 +83,7 @@
             //SPLASH
             //have the scroller slowly fade when the user hovers their mouse over content1
             $(document).ready(function(){
-                $(".content1").hover(function(){
+                $("#splash").hover(function(){
                     $(".scroller").fadeOut(1000);
                     $(".scroller").fadeIn(1000);
                 });
