@@ -6,12 +6,16 @@
     margin-left: 300px;
     margin-right: 300px;
     position: fixed; /*so the nav will stay present throughout the site*/
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #navigation li {
     list-style-type: none;
     padding-left: 50px;
+    font-family: Rokkitt;
+    font-weight: 700;
+    font-size: 20px;
+    color: #444444;
 }
 
 /*SPLASH PAGE*/
