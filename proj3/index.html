@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Burke, Proj #3</title>
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--DESKTOP NAV-->
+        <ul id="desktop">
+            <li><a href="#splash">Home </a></li>
+            <li><a href="#page1">Page #1</a></li>
+            <li><a href="#page2">Page #2</a></li>
+            <li><a href="#page3">Page #3</a></li>
+        </ul>
+        
+        <!--MOBILE NAV-->
+        <ul id="mobile">
+            <li><a href="#splash">Home </a></li>
+            <li><a href="#page1">Page #1</a></li>
+            <li><a href="#page2">Page #2</a></li>
+            <li><a href="#page3">Page #3</a></li>
+        </ul>
+        
+        <!--SPLASH PAGE-->
+        <div id="splash">
+            <h2>The benefits of</h2>
+            <h1>A Plant Based Diet</h1>
+        </div>
+        
+        <!--PAGE #1-->
+        <div id="page1">
+            <div class="content"></div>
+            <img class="sea" src="media/placeholder.png" onclick="clickSea()" />
+            <img class="land" src="media/placeholder.png" onclick="clickLand()" />
+        </div>
+        
+        <!--PAGE #2-->
+        <div id="page2">
+            
+        </div>
+        
+        <!--PAGE #3-->
+        <div id="page3">
+            <img class="bee1" src="media/bees.png" />
+            <img class="bee2" src="media/bees.png" />
+            <img class="bee3" src="media/bee.png" />
+            <img class="bee4" src="media/bee.png" />
+            <img class="bee5" src="media/bees.png" />
+            <img class="bee6" src="media/bees.png" />
+            <img class="bee7" src="media/bees.png" />
+            <img class="bee8" src="media/bee.png" />
+            <img class="bee9" src="media/bee.png" />
+            <img class="bee10" src="media/bee.png" />
+            <img class="bee11" src="media/bees.png" />
+            <img class="bee12" src="media/bees.png" />
+            <img class="bee13" src="media/bees.png" />
+            <img class="bee14" src="media/bee.png" />
+            <img class="bee15" src="media/bee.png" />
+            <img class="bee16" src="media/bee.png" />
+            <img class="bee17" src="media/bees.png" />
+            <img class="bee18" src="media/bee.png" />
+            <img class="bee19" src="media/bees.png" />
+            <img class="bee20" src="media/bee.png" />
+        </div>
+        
+        <!--FOOTER SECTION-->
+        <footer>
+        </footer>
+        
+        <!--JAVASCRIPT-->
+        <script>
+            //NAV SLIDE
+            
+            //PAGE #1
+            let descr = ("direction.txt")
+            $(".content").load(descr);
+            
+            function clickLand() {
+                var descr2 = ("sea.txt");
+                $(".content").load(descr);
+            }
+        </script>
+    </body>
+</html>

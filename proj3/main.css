@@ -1,0 +1,223 @@
+/*FONT STYLES*/
+
+/*NAVIGATION*/
+#desktop {
+    display: flex;
+}
+
+#mobile {
+    display: none;
+}
+
+/*SPLASH PAGE*/
+#splash {
+    
+}
+
+/*PAGE #1*/
+#page1 {
+    display: grid;
+    height: 60vh;
+    background-color: #1FA6F2;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 150px 1fr 1fr 1fr 150px;
+    grid-template-areas: 
+        ". . . . ."
+        ". descr land sea ."
+        ". . . . .";
+}
+
+.sea {
+    grid-area: sea;
+}
+
+.land {
+    grid-area: land;
+}
+
+.content {
+    grid-area: descr;
+}
+
+/*PAGE #2*/
+
+
+/*PAGE #3*/
+#page3 {
+    /*grid*/
+    display: grid;
+    grid-template-rows: 100px 1fr 125px 125px 125px 1fr 125px;
+    grid-template-columns: 150px 125px 125px 125px 125px 1fr 125px 125px 125px 125px 150px;
+    grid-template-areas: 
+        ". . . . . . . . . . ."
+        ". . . . . . . . . . ."
+        ". . bee2 bee17 bee1 . bee4 bee18 bee3 . ."
+        ". bee5 bee6 bee7 bee19 . bee20 bee8 bee9 bee10 ."
+        ". bee11 bee12 bee13 . . . bee14 bee15 bee16 ."
+        ". . . . . . . . . . ."
+        ". . . . . . . . . . .";
+    
+    /*background*/
+    background: url("media/flowers.png");
+	height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*bees?*/
+.bee1 {
+    padding-top: 40px;
+    grid-area: bee1;
+    width: 60px;
+    height: 55px;
+}
+
+.bee2 {
+    grid-area: bee2;
+    width: 100px;
+    height: 90px;
+}
+
+.bee3 {
+    grid-area: bee3;
+    width: 100px;
+    height: 90px;
+}
+
+.bee4 {
+    padding-top: 40px;
+    grid-area: bee4;
+    width: 60px;
+    height: 55px;
+    padding-left: 30px;
+}
+
+.bee5 {
+    grid-area: bee5;
+    width: 85px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+.bee6 {
+    grid-area: bee6;
+    width: 65px;
+    height: 60px;
+    padding-left: 25px;
+}
+
+.bee7 {
+    grid-area: bee7;
+    width: 75px;
+    height: 70px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.bee8 {
+    grid-area: bee8;
+    width: 75px;
+    height: 70px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.bee9 {
+    grid-area: bee9;
+    width: 65px;
+    height: 60px;
+    padding-right: 25px;
+}
+
+.bee10 {
+    grid-area: bee10;
+    width: 85px;
+    height: 80px;
+}
+
+.bee11 {
+    grid-area: bee11;
+    width: 75px;
+    height: 70px;
+    margin-left: 10px;
+}
+
+.bee12 {
+    grid-area: bee12;
+    width: 100px;
+    height: 90px;
+}
+
+.bee13 {
+    grid-area: bee13;
+    width: 50px;
+    height: 45px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.bee14 {
+    grid-area: bee14;
+    width: 50px;
+    height: 45px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.bee15 {
+    grid-area: bee15;
+    width: 100px;
+    height: 90px;
+}
+
+.bee16 {
+    grid-area: bee16;
+    width: 75px;
+    height: 70px;
+}
+
+.bee17 {
+    grid-area: bee17;
+    width: 75px;
+    height: 70px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.bee18 {
+    grid-area: bee18;
+    width: 75px;
+    height: 70px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+.bee19 {
+    grid-area: bee19;
+    width: 50px;
+    height: 45px;
+}
+
+.bee20 {
+    grid-area: bee20;
+    width: 50px;
+    height: 45px;
+    padding-left: 45px;
+}
+
+/*wiggle*/
+/*help from W3Schools*/
+#page3 img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(2px, 3px) rotate(0deg); }
+  20% { transform: translate(-2px, 2px) rotate(1deg); }
+  40% { transform: translate(5px, 3px) rotate(0deg); }
+  60% { transform: translate(3px, -5px) rotate(1deg); }
+  80% { transform: translate(5px, 3px) rotate(0deg); }
+  100% { transform: translate(2px, -5px) rotate(-1deg); }
