@@ -67,31 +67,22 @@
             //NAV SLIDE
             $("a[href^='#']").click(function (event) {
                 event.preventDefault();
-                let target = $(this.hash);
-                $('html, body').animate({ scrollTop: target.offset().top }, 500);
-
-                // Make this more accessible by setting target.focus(); 
-                // See https://css-tricks.com/smooth-scrolling-accessibility/ for details
-
-                if (target.is(":focus")) { // Checking if the target was focused
-                    return false;
-                } else {
-                    target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                    target.focus(); // Setting focus
-                };
-
+                let navTarget = $(this.hash);
+                $('html, body').animate({ scrollTop: navTarget.offset().top }, 500);
             });
             
             //PAGE #1
-            //change text when click on image
-            let descr = ("direction.txt")
+            //change the content text when clicking on the images
+            let descr = ("direction.txt") //load "direction.txt" by default
             $(".content").load(descr);
             
+            //a function to change the content text from whatever it was to "land.txt"
             function clickLand() {
                 var descr2 = ("land.txt");
                 $(".content").load(descr2);
             }
             
+            //a function to change the content text from whatever it was to "sea.txt"
             function clickSea() {
                 var descr3 = ("sea.txt");
                 $(".content").load(descr3);
