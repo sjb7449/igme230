@@ -135,12 +135,6 @@ body {
         ". . . . .";
 }
 
-.content2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .sea {
     grid-area: sea;
 }
