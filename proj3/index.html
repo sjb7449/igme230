@@ -107,20 +107,7 @@
             }
             
             //PAGE #3
-            //moves the image background when the user moves their mouse over it
-            //help recieved from codepen.io
-            $(document).ready(function() {
-            var movementStrength = 50;
-            var height = movementStrength / $(window).height();
-            var width = movementStrength / $(window).width();
-            $("#top-image").mousemove(function(e){
-                      var pageX = e.pageX - ($(window).width() / 2);
-                      var pageY = e.pageY - ($(window).height() / 2);
-                      var newvalueX = width * pageX * -1 - 25;
-                      var newvalueY = height * pageY * -1 - 50;
-                      $('#top-image').css("background-position", newvalueX+"px     "+newvalueY+"px");
-            });
-            });
+            //has images going through a carousel
         </script>
     </body>
 </html>
