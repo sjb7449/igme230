@@ -2,11 +2,15 @@
 
 /*NAVIGATION*/
 #navigation {
-    display: flex;
     margin-left: 300px;
     margin-right: 300px;
     position: fixed; /*so the nav will stay present throughout the site*/
+}
+
+#navigation div{
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #navigation li {
