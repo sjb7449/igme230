@@ -137,10 +137,12 @@ body {
 
 .sea {
     grid-area: sea;
+    margin: 0 auto;
 }
 
 .land {
     grid-area: land;
+    margin: 0 auto;
 }
 
 .content {
@@ -152,6 +154,7 @@ body {
     height 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin: 0 auto;
 }
 
 /*PAGE #2*/
