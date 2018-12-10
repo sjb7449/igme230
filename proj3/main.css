@@ -1,31 +1,115 @@
-/*FONT STYLES*/
-
+/*BODY STYLES*/
+body {
+    background-color: #f3f3f3;
+}
 /*NAVIGATION*/
 #navigation {
-    margin-left: 300px;
-    margin-right: 300px;
+    width: 100vw;
     position: fixed; /*so the nav will stay present throughout the site*/
-}
-
-#navigation div{
+    
+    /*flexbox*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #navigation li {
-    list-style-type: none;
-    padding-left: 50px;
-    font-family: Rokkitt;
+    list-style-type: none; /*get rid of bullets*/
+    margin-right: 80px;
+    font-family: Rokkitt; /*font style*/
     font-weight: 700;
-    font-size: 20px;
+    font-size: 20px;   
+}
+
+#navigation a {
     color: #444444;
-    text-decoration: none;
+    text-decoration: none; /*get rid of underline*/
+}
+
+/*when the nav is clicked have it stay in these styles*/
+#navigation a:focus {
+    color: #1FA6F2;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+#navigation a:hover {
+    font-weight: 800;
+}
+
+/*nav2 needs to be adjusted specifically for contrast reasons*/
+#navigation a.nav2:focus {
+    color: #f3f3f3;
+    text-decoration: underline;
+    font-weight: 800;
 }
 
 /*SPLASH PAGE*/
 #splash {
+    background-color: #f3f3f3;
+    width: 100vw;
+    height: 80vh;
     
+    /*grid*/
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 
+        ". . ."
+        ". content1 ."
+        ". . ."
+}
+
+#splash .content1 {
+    grid-area: content1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*mouse shape for the user to scroll over*/
+/*taken from css tricks*/
+#splash .mouse {
+    display: block;
+    width: 126px;
+    height: 180px;
+    border: #888888 2px solid;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /*making that shape look all egg-like*/
+}
+
+/*circle shape*/
+/*the scroller for the mouse*/
+#splash .mouse .scroller {
+    height: 20px;
+    width: 20px;
+    border: #888888 2px solid;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+/*splash fonts*/
+#splash h3 {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #888;
+    font-weight: 400;
+}
+
+#splash h2 {
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 50px;
+    margin: 0;
+}
+
+#splash h1 {
+    font-family: Rokkitt;
+    font-size: 80px;
+    font-weight: 600;
+    margin: 0;
 }
 
 /*PAGE #1*/
@@ -66,7 +150,7 @@
     
     /*grid layout*/
     display: grid;
-    grid-template-rows: 100px 1fr 125px 125px 125px 1fr 125px;
+    grid-template-rows: 150px 1fr 125px 125px 125px 1fr 125px;
     grid-template-columns: 150px 125px 125px 125px 125px 1fr 125px 125px 125px 125px 150px;
     grid-template-areas: 
         ". . . . . . . . . . ."
@@ -78,7 +162,7 @@
         ". . . . . . . . . . .";
     
     /*background*/
-    background: url("media/flowers.png");
+    background: url("media/flower.png"); /*make background img*/
 	height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -231,11 +315,11 @@
 /*have the bees wiggle when you hover over them*/
 /*help from W3Schools*/
 #page3 img:hover {
-  animation: shake 0.5s;
+  animation: hovering 0.5s;
   animation-iteration-count: infinite;
 }
 
-@keyframes shake {
+@keyframes hovering {
   0% { transform: translate(2px, 3px) rotate(0deg); }
   20% { transform: translate(-2px, 2px) rotate(1deg); }
   40% { transform: translate(5px, 3px) rotate(0deg); }
