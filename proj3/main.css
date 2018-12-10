@@ -3,10 +3,10 @@
 /*NAVIGATION*/
 #navigation {
     display: flex;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 300px;
+    margin-right: 300px;
     position: fixed; /*so the nav will stay present throughout the site*/
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #navigation li {
