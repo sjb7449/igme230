@@ -1,12 +1,8 @@
 /*FONT STYLES*/
 
 /*NAVIGATION*/
-#desktop {
+#navigation {
     display: flex;
-}
-
-#mobile {
-    display: none;
 }
 
 /*SPLASH PAGE*/
@@ -16,8 +12,11 @@
 
 /*PAGE #1*/
 #page1 {
-    display: grid;
     height: 60vh;
+    width: 100vw;
+    
+    /*grid*/
+    display: grid;
     background-color: #1FA6F2;
     grid-template-rows: 100px 1fr 100px;
     grid-template-columns: 150px 1fr 1fr 1fr 150px;
@@ -44,6 +43,9 @@
 
 /*PAGE #3*/
 #page3 {
+    width: 100vw;
+    height: 100vh;
+    
     /*grid*/
     display: grid;
     grid-template-rows: 100px 1fr 125px 125px 125px 1fr 125px;

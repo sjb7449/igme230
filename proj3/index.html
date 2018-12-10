@@ -9,15 +9,7 @@
     </head>
     <body>
         <!--DESKTOP NAV-->
-        <ul id="desktop">
-            <li><a href="#splash">Home </a></li>
-            <li><a href="#page1">Page #1</a></li>
-            <li><a href="#page2">Page #2</a></li>
-            <li><a href="#page3">Page #3</a></li>
-        </ul>
-        
-        <!--MOBILE NAV-->
-        <ul id="mobile">
+        <ul id="navigation">
             <li><a href="#splash">Home </a></li>
             <li><a href="#page1">Page #1</a></li>
             <li><a href="#page2">Page #2</a></li>
@@ -73,8 +65,25 @@
         <!--JAVASCRIPT-->
         <script>
             //NAV SLIDE
+            $("a[href^='#']").click(function (event) {
+                event.preventDefault();
+                let target = $(this.hash);
+                $('html, body').animate({ scrollTop: target.offset().top }, 500);
+
+                // Make this more accessible by setting target.focus(); 
+                // See https://css-tricks.com/smooth-scrolling-accessibility/ for details
+
+                if (target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                    target.focus(); // Setting focus
+                };
+
+            });
             
             //PAGE #1
+            //change text when click on image
             let descr = ("direction.txt")
             $(".content").load(descr);
             
