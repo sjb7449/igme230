@@ -62,6 +62,8 @@ body {
 
 #splash .content1 {
     grid-area: content1;
+    
+    /*flex to organize items*/
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -347,3 +349,16 @@ body {
 }
 
 /*PAGE #3*/
+#page3 {
+    
+    /*background image*/
+    background: linear-gradient(
+        rgba(31,166,242, 0.6), 
+        rgba(31,166,242, 0.6)
+    ),
+        url("media/pig.jpg"); /*make background img*/
+	height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
