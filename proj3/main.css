@@ -123,26 +123,28 @@ body {
 #page1 {
     height: 60vh;
     width: 100vw;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    
+    /*grid laylout*/
+    display: grid;
     background-color: #1FA6F2;
-}
-
-.content2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 150px 1fr 1fr 1fr 150px;
+    grid-template-areas: 
+        ". . . . ."
+        ". descr land sea ."
+        ". . . . .";
 }
 
 .sea {
+    grid-area: sea;
 }
 
 .land {
+    grid-area: land;
 }
 
 .content {
+    grid-area: descr;
     font-family: Roboto;
     font-size: 20px;
     color: #f3f3f3;
