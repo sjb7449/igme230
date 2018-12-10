@@ -121,7 +121,7 @@ body {
 
 /*PAGE #1*/
 #page1 {
-    height: 60vh;
+    height: 70vh;
     width: 100vw;
     
     /*grid laylout*/
@@ -131,18 +131,22 @@ body {
     grid-template-columns: 150px 1fr 1fr 1fr 150px;
     grid-template-areas: 
         ". . . . ."
-        ". descr land sea ."
+        ". land sea descr ."
         ". . . . .";
 }
 
 .sea {
     grid-area: sea;
     margin: 0 auto;
+    width: 200px;
+    height: 200px;
 }
 
 .land {
     grid-area: land;
     margin: 0 auto;
+    width: 250px;
+    height: 250px;
 }
 
 .content {
@@ -158,17 +162,14 @@ body {
 }
 
 /*PAGE #2*/
-
-
-/*PAGE #3*/
-#page3 {
+#page2 {
     width: 100vw;
     height: 100vh;
     
     /*grid layout*/
     display: grid;
     grid-template-rows: 150px 1fr 125px 125px 125px 1fr 125px;
-    grid-template-columns: 150px 125px 125px 125px 125px 1fr 125px 125px 125px 125px 150px;
+    grid-template-columns: 50px 125px 125px 125px 125px 1fr 125px 125px 125px 125px 50px;
     grid-template-areas: 
         ". . . . . . . . . . ."
         ". . . . . . . . . . ."
@@ -331,7 +332,7 @@ body {
 
 /*have the bees wiggle when you hover over them*/
 /*help from W3Schools*/
-#page3 img:hover {
+#page2 img:hover {
   animation: hovering 0.5s;
   animation-iteration-count: infinite;
 }
@@ -344,3 +345,5 @@ body {
   80% { transform: translate(5px, 3px) rotate(0deg); }
   100% { transform: translate(2px, -5px) rotate(-1deg); }
 }
+
+/*PAGE #3*/
