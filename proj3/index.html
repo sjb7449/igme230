@@ -8,7 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-        <!--DESKTOP NAV-->
+        <!--NAV-->
         <ul id="navigation">
             <li><a href="#splash">Home </a></li>
             <li><a href="#page1">Page #1</a></li>
@@ -65,10 +65,11 @@
         <!--JAVASCRIPT-->
         <script>
             //NAV SLIDE
-            $("a[href^='#']").click(function (event) {
+            //taken from one of our class exercises
+            $("a[href^='#']").click(function (event) { //single out the specific ahref tags and apply this function to them
                 event.preventDefault();
-                let navTarget = $(this.hash);
-                $('html, body').animate({ scrollTop: navTarget.offset().top }, 500);
+                let navTarget = $(this.hash); //make a variable of navTarget
+                $('html, body').animate({ scrollTop: navTarget.offset().top }, 500); //animate the screen to slide down when clicked
             });
             
             //PAGE #1

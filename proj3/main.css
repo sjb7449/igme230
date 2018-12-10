@@ -3,6 +3,7 @@
 /*NAVIGATION*/
 #navigation {
     display: flex;
+    position: fixed;
 }
 
 /*SPLASH PAGE*/
