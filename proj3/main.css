@@ -37,8 +37,14 @@ body {
     font-weight: 800;
 }
 
-/*nav2 needs to be adjusted specifically for contrast reasons*/
+/*nav2 and nav4 needs to be adjusted specifically for contrast reasons*/
 #navigation a.nav2:focus {
+    color: #f3f3f3;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+#navigation a.nav4:focus {
     color: #f3f3f3;
     text-decoration: underline;
     font-weight: 800;
@@ -47,7 +53,7 @@ body {
 /*SPLASH PAGE*/
 #splash {
     background-color: #f3f3f3;
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     
     /*grid*/
@@ -124,7 +130,7 @@ body {
 /*PAGE #1*/
 #page1 {
     height: 70vh;
-    width: 100vw;
+    width: 100%;
     
     /*grid laylout*/
     display: grid;
@@ -170,7 +176,7 @@ body {
 
 /*PAGE #2*/
 #page2 {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     
     /*grid layout*/
@@ -355,9 +361,89 @@ body {
 }
 
 /*PAGE #3*/
-#page3 {
+#page3{
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: #1FA6F2;
+}
+
+/*slideshow of images*/
+.slideContain {
+    width: 400px;
+    position: relative;
+}
+
+.slideShow {
+    display: none
+}
+
+.slideShow img {
+    vertical-align: middle;
+    height: 400px;
+}
+
+/*previous & next button styles*/
+.arrow-left, .arrow-right {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #f3f3f3;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.7s ease;
+}
+
+/*previous & next position styles*/
+.arrow-right {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*previous & next button's hover    
+the background color of the buttons will change on hover*/
+.arrow-left:hover, .arrow-right:hover {
+    background-color: #444;
+    color: #f3f3f3;
+}
+
+/*have the images fade as you click the arrows to the next or previous images*/
+.trans {
+    animation-name: trans;
+    animation-duration: 1.5s;
+}
+
+@keyframes trans {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/*spacing*/
+.space {
+    width: 70px;
+}
+
+/*content3*/
+.content3 {
+    max-width: 300px;
+}
+
+/*font styles*/
+.content3 h1{
+    font-family: Rokkitt;
+    font-size: 50px;
+    color: #f3f3f3;
+}
+
+.content3 p{
+    font-family: Roboto;
+    color: #f3f3f3;
+    font-size: 20px;
 }
 
 /*FOOTER*/
@@ -387,4 +473,96 @@ footer a {
 footer a:hover {
     font-weight: 600;
     text-decoration: underline;
+}
+/*DOCUMENTATION NAVIGATION
+need it to not be fixed*/
+#navigation-doc {
+    width: 100vw;
+    padding-top: 10px;
+    
+    /*flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navigation-doc li {
+    list-style-type: none; /*get rid of bullets*/
+    margin-right: 80px;
+    font-family: Rokkitt; /*font style*/
+    font-weight: 700;
+    font-size: 20px;   
+}
+
+#navigation-doc a {
+    color: #444444;
+    text-decoration: none; /*get rid of underline*/
+}
+
+/*when the nav is clicked have it stay in these styles*/
+#navigation-doc a:focus {
+    color: #1FA6F2;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+#navigation-doc a:hover {
+    font-weight: 800;
+}
+
+/*DOCUMENTATION*/
+#doc {
+    /*spacing*/
+    padding-top: 30px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.doc-flex {
+    /*flex*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.r-content {
+    width: 45%;
+}
+
+.l-content {
+    width: 45%;
+}
+
+/*text styles*/
+#doc h1 {
+    font-family: Rokkitt;
+    font-size: 50px;
+    color: #444;
+}
+
+#doc h2 {
+    font-family: Rokkitt;
+    font-size: 35px;
+    color: #1FA6F2;
+}
+
+#doc h3 {
+    font-family: Rokkitt;
+    font-size: 25px;
+    text-decoration: underline;
+    color: #444;
+}
+
+#doc p {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #444;
+    line-height: 25px;
+    padding-bottom: 40px;
+}
+
+#doc li {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #444;
+    line-height: 25px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     
     <head>
         <meta charset="utf-8">
@@ -15,7 +15,7 @@
             <li><a href="#splash">Home </a></li>
             <li><a href="#page1" class="nav2">The Environment</a></li>
             <li><a href="#page2">The Bees</a></li>
-            <li><a href="#page3">The Animals</a></li>
+            <li><a href="#page3" class="nav4">The Animals</a></li>
         </ul>
         
         <!--SPLASH PAGE-->
@@ -62,8 +62,35 @@
         </div>
         
         <!--PAGE #3-->
+        <!--slideshow of animal images-->
         <div id="page3">
-            
+            <div class="slideContain">
+                <!--img1-->
+                <div class="slideShow trans">
+                    <img src="media/cow.jpg" style="width:100%">
+                </div>
+
+                <!--img2-->
+                <div class="slideShow trans">
+                    <img src="media/pig.jpg" style="width:100%">
+                </div>
+
+                <!--img3-->
+                <div class="slideShow trans">
+                    <img src="media/chick.jpg" style="width:100%">
+                </div>
+
+                <a class="arrow-left" onclick="addSlides(-1)">&#10094;</a>
+                <a class="arrow-right" onclick="addSlides(1)">&#10095;</a>
+            </div>
+            <div class="space"></div>
+            <div class="content3">
+                <h1>Animal Intellegence</h1>
+                <p><b>Cows</b> live between 18 and 22 years, but some can live up to 25 years or even more.</p>
+                <p><b>Pigs</b> are considered the 5th most intelligent animal, more intelligent than dogs.</p>
+                <p><b>Chicken</b> could be more intelligent than toddlers as they exhibit mathematical reasoning and decent self-control.</p>
+                <p><b></b></p>
+            </div>
         </div>
         
         <!--FOOTER SECTION-->
@@ -109,8 +136,31 @@
             }
             
             //PAGE #3
-            //has images going through a carousel
-            
+            //has images in a slideshow
+            //create variables
+            var slideNum= 1;
+            slidingShows(slideNum);
+
+            //functions
+            function addSlides(n) {
+                slidingShows(slideNum+= n);
+            }
+
+            function displaySlide(n) {
+                slidingShows(slideNum= n);
+            }
+
+            function slidingShows(n) {
+                var x;
+                var imgs = document.getElementsByClassName("slideShow");
+                if (n > imgs.length) {slideNum= 1}    
+                if (n < 1) {slideNum= imgs.length}
+                for (x = 0; x < imgs.length; x++) {
+                    imgs[x].style.display = "none";  
+                }
+                
+                imgs[slideNum-1].style.display = "block";
+            }
         </script>
     </body>
 </html>
