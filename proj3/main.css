@@ -640,16 +640,10 @@ need it to not be fixed*/
     
     /*PAGE #1*/
     #page1 {
-        height: 500px;
-        /*grid laylout*/
-        grid-template-rows: 50px 1fr 1fr 1fr 50px;
-        grid-template-columns: 50px 1fr 50px;
-        grid-template-areas: 
-            ". . ."
-            ". land ."
-            ". sea .";
-            ". descr .";
-            ". . .";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     .sea {
@@ -658,6 +652,7 @@ need it to not be fixed*/
     }
 
     .land {
+        padding-top: 25px;
         width: 125px;
         height: 125px;
     }
@@ -668,6 +663,6 @@ need it to not be fixed*/
         width: 200px;
         height 200px;
         padding-top: 25px;
-        padding-bottom: 50pxx;
+        padding-bottom: 50px;
     }
 }
