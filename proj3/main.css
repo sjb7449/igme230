@@ -588,19 +588,19 @@ need it to not be fixed*/
 @media only screen and (max-width: 500px) {
     /*NAVIGATION*/
     #navigation {
-        width: 80vw;
+        width: 300px;
         position: fixed; /*so the nav will stay present throughout the site*/
 
         /*flexbox*/
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 
     #navigation li {
         font-size: 12px;
-        margin-right: 20px;
-        font-weight: 800;
+        margin-right: 0px;
+        font-weight: 700;
     }
     
     /*SPLASH PAGE*/
@@ -665,5 +665,247 @@ need it to not be fixed*/
         padding-top: 50px;
         padding-bottom: 50px;
         padding-left: 10px;
+    }
+    
+    /*PAGE #2*/
+    #page2 {
+        background: url("media/mobile.png"); /*make background img*/
+        height: 600px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        grid-template-rows: 30px 1fr 50px 50px 50px 1fr 30px;
+        grid-template-columns: 10px 50px 50px 50px 50px 1fr 50px 50px 50px 50px 10px;
+    }
+    
+    /*bee styles*/
+    .bee1 {
+        display: none;
+    }
+
+    .bee2 {
+        width: 50px;
+        height: 40px;
+    }
+
+    .bee3 {
+        width: 50px;
+        height: 40px;
+    }
+
+    .bee4 {
+        display: none;
+    }
+
+    .bee5 {
+        width: 35px;
+        height: 30px;
+        margin-left: 0px;
+    }
+
+    .bee6 {
+        width: 15px;
+        height: 10px;
+        padding-left: 0px;
+    }
+
+    .bee7 {
+        width: 25px;
+        height: 20px;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+
+    .bee8 {
+        width: 25px;
+        height: 20px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+
+    .bee9 {
+        width: 25px;
+        height: 20px;
+        padding-right: 0px;
+    }
+
+    .bee10 {
+        width: 35px;
+        height: 30px;
+    }
+
+    .bee11 {
+        width: 25px;
+        height: 20px;
+        margin-left: 0px;
+    }
+
+    .bee12 {
+        width: 50px;
+        height: 40px;
+    }
+
+    .bee13 {
+        display: none;
+    }
+
+    .bee14 {
+        display: none;
+    }
+
+    .bee15 {
+        width: 50px;
+        height: 40px;
+    }
+
+    .bee16 {
+        width: 25px;
+        height: 20px;
+    }
+
+    .bee17 {
+        width: 25px;
+        height: 20px;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+
+    .bee18 {
+        width: 25px;
+        height: 20px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+
+    .bee19 {
+        display: none;
+    }
+
+    .bee20 {
+        display: none;
+    }
+    
+    /*have the bees wiggle when you hold your thumb on them*/
+    #page2 img:active {
+      animation: hovering 0.5s;
+      animation-iteration-count: infinite;
+    }
+    
+    /*PAGE #3*/
+    #page3 {
+        height: 500px;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    /*slideshow*/
+    .slideContain {
+        padding-top: 25px;
+        width: 200px;
+        position: relative;
+    }
+
+    .slideShow {
+        display: none
+    }
+
+    .slideShow img {
+        vertical-align: middle;
+        height: 200px;
+    }
+    
+    /*spacing*/
+    .space {
+        display: none;
+    }
+
+    /*content3*/
+    .content3 {
+        width: 250px;
+    }
+    
+    /*font styles*/
+    .content3 h1{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .content3 p{
+        font-size: 12px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    
+    /*FOOTER*/
+    footer p {
+        font-size: 12px;
+        padding-left: 50px;
+    }
+
+    footer a {
+        font-size: 12px;
+        padding-right: 50px;
+    }
+    
+    /*DOCUMENTATION*/
+    /*navigation*/
+    #navigation-doc {
+        width: 300px;
+
+        /*flexbox*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #navigation-doc li {
+        font-size: 12px;
+        margin-right: 0px;
+        font-weight: 700;
+    }
+    
+    /*content*/
+    #doc {
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .doc-flex{
+        display: block;
+    }
+    
+    .r-content {
+        width: 100%;
+    }
+
+    .l-content {
+        width: 100%;
+    }
+    
+    #doc h1 {
+        font-size: 25px;
+    }
+    
+    #doc h2 {
+        font-size: 20px;
+    }
+    
+    #doc h3 {
+        font-size: 15px;
+    }
+    
+    #doc p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    
+    #doc img {
+        max-width: 300px;
+        max-height: 500px;
+    }
+    
+    #doc li {
+        font-size: 12px;
+        line-height: 20px;
     }
 }

@@ -118,6 +118,14 @@
                 });
             });
             
+            //have the scroller slowly fade when the user clicks on content1 (for mobile)
+            $(document).ready(function(){
+                $("#splash").click(function(){
+                    $(".scroller").fadeOut(1000);
+                    $(".scroller").fadeIn(1000);
+                });
+            });
+            
             //PAGE #1
             //change the content text when clicking on the images
             let descr = ("direction.txt") //load "direction.txt" by default
