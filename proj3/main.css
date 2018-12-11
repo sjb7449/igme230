@@ -536,6 +536,7 @@ need it to not be fixed*/
 #doc img {
     max-width: 400px;
     max-height: 900px;
+    padding-bottom: 50px;
 }
 
 /*text styles*/
