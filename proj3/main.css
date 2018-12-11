@@ -54,7 +54,7 @@ body {
 #splash {
     background-color: #f3f3f3;
     width: 100%;
-    height: 80vh;
+    height: 600px;
     
     /*grid*/
     display: grid;
@@ -129,7 +129,7 @@ body {
 
 /*PAGE #1*/
 #page1 {
-    height: 70vh;
+    height: 500px;
     width: 100%;
     
     /*grid laylout*/
@@ -143,6 +143,7 @@ body {
         ". . . . .";
 }
 
+/*image styles*/
 .sea {
     grid-area: sea;
     padding-top: 25px;
@@ -367,7 +368,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 90vh;
+    height: 700px;
     background-color: #1FA6F2;
 }
 
@@ -456,6 +457,7 @@ footer {
     justify-content: space-between;
 }
 
+/*footer styles*/
 footer p {
     font-family: Roboto;
     color: #f3f3f3;
@@ -475,6 +477,7 @@ footer a:hover {
     font-weight: 600;
     text-decoration: underline;
 }
+
 /*DOCUMENTATION NAVIGATION
 need it to not be fixed*/
 #navigation-doc {
@@ -881,6 +884,8 @@ need it to not be fixed*/
     .l-content {
         width: 100%;
     }
+    
+    /*documentation text styles*/
     
     #doc h1 {
         font-size: 25px;

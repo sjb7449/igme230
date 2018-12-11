@@ -149,7 +149,7 @@
             var slideNum= 1;
             slidingShows(slideNum);
 
-            //functions
+            //functions to tell javascript how to toggle throught the images in the slides
             function addSlides(n) {
                 slidingShows(slideNum+= n);
             }
@@ -159,8 +159,11 @@
             }
 
             function slidingShows(n) {
+                //variables
                 var x;
                 var imgs = document.getElementsByClassName("slideShow");
+                
+                //toggle through images on loop
                 if (n > imgs.length) {slideNum= 1}    
                 if (n < 1) {slideNum= imgs.length}
                 for (x = 0; x < imgs.length; x++) {
