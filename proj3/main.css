@@ -145,6 +145,7 @@ body {
 
 .sea {
     grid-area: sea;
+    padding-top: 25px;
     margin: 0 auto;
     width: 200px;
     height: 200px;
@@ -182,7 +183,7 @@ body {
     /*grid layout*/
     display: grid;
     grid-template-rows: 150px 1fr 125px 125px 125px 1fr 125px;
-    grid-template-columns: 50px 125px 125px 125px 125px 1fr 125px 125px 125px 125px 50px;
+    grid-template-columns: 10px 125px 125px 125px 125px 1fr 125px 125px 125px 125px 10px;
     grid-template-areas: 
         ". . . . . . . . . . ."
         ". . . . . . . . . . ."
@@ -206,56 +207,56 @@ body {
 .bee1 {
     padding-top: 40px;
     grid-area: bee1;
-    width: 60px;
-    height: 55px;
+    width: 50px;
+    height: 45px;
 }
 
 .bee2 {
     grid-area: bee2;
-    width: 100px;
-    height: 90px;
+    width: 90px;
+    height: 80px;
 }
 
 .bee3 {
     grid-area: bee3;
-    width: 100px;
-    height: 90px;
+    width: 90px;
+    height: 80px;
 }
 
 .bee4 {
     padding-top: 40px;
     grid-area: bee4;
-    width: 60px;
-    height: 55px;
+    width: 50px;
+    height: 45px;
     padding-left: 30px;
 }
 
 .bee5 {
     grid-area: bee5;
-    width: 85px;
-    height: 80px;
+    width: 75px;
+    height: 70px;
     margin-left: 20px;
 }
 
 .bee6 {
     grid-area: bee6;
-    width: 65px;
-    height: 60px;
+    width: 55px;
+    height: 50px;
     padding-left: 25px;
 }
 
 .bee7 {
     grid-area: bee7;
-    width: 75px;
-    height: 70px;
+    width: 65px;
+    height: 60px;
     padding-left: 10px;
     padding-top: 10px;
 }
 
 .bee8 {
     grid-area: bee8;
-    width: 75px;
-    height: 70px;
+    width: 65px;
+    height: 60px;
     padding-right: 10px;
     padding-top: 10px;
 }
@@ -269,77 +270,77 @@ body {
 
 .bee10 {
     grid-area: bee10;
-    width: 85px;
-    height: 80px;
+    width: 75px;
+    height: 70px;
 }
 
 .bee11 {
     grid-area: bee11;
-    width: 75px;
-    height: 70px;
+    width: 65px;
+    height: 60px;
     margin-left: 10px;
 }
 
 .bee12 {
     grid-area: bee12;
-    width: 100px;
-    height: 90px;
+    width: 90px;
+    height: 80px;
 }
 
 .bee13 {
     grid-area: bee13;
-    width: 50px;
-    height: 45px;
+    width: 40px;
+    height: 35px;
     padding-left: 20px;
     padding-top: 10px;
 }
 
 .bee14 {
     grid-area: bee14;
-    width: 50px;
-    height: 45px;
+    width: 40px;
+    height: 35px;
     padding-left: 20px;
     padding-top: 10px;
 }
 
 .bee15 {
     grid-area: bee15;
-    width: 100px;
-    height: 90px;
+    width: 90px;
+    height: 80px;
 }
 
 .bee16 {
     grid-area: bee16;
-    width: 75px;
-    height: 70px;
+    width: 65px;
+    height: 60px;
 }
 
 .bee17 {
     grid-area: bee17;
-    width: 75px;
-    height: 70px;
+    width: 65px;
+    height: 60px;
     padding-left: 10px;
     padding-top: 20px;
 }
 
 .bee18 {
     grid-area: bee18;
-    width: 75px;
-    height: 70px;
+    width: 65px;
+    height: 60px;
     padding-right: 10px;
     padding-top: 20px;
 }
 
 .bee19 {
     grid-area: bee19;
-    width: 50px;
-    height: 45px;
+    width: 40px;
+    height: 35px;
 }
 
 .bee20 {
     grid-area: bee20;
-    width: 50px;
-    height: 45px;
+    width: 40px;
+    height: 35px;
     padding-left: 45px;
 }
 
@@ -477,7 +478,7 @@ footer a:hover {
 /*DOCUMENTATION NAVIGATION
 need it to not be fixed*/
 #navigation-doc {
-    width: 100vw;
+    max-width: 100%;
     padding-top: 10px;
     
     /*flexbox*/
@@ -491,7 +492,7 @@ need it to not be fixed*/
     margin-right: 80px;
     font-family: Rokkitt; /*font style*/
     font-weight: 700;
-    font-size: 20px;   
+    font-size: 20px;
 }
 
 #navigation-doc a {
@@ -532,6 +533,11 @@ need it to not be fixed*/
     width: 45%;
 }
 
+#doc img {
+    max-width: 400px;
+    max-height: 900px;
+}
+
 /*text styles*/
 #doc h1 {
     font-family: Rokkitt;
@@ -565,4 +571,14 @@ need it to not be fixed*/
     font-size: 16px;
     color: #444;
     line-height: 25px;
+    padding-bottom: 10px;
+}
+
+#doc a{
+    color: #1FA6F2;
+    text-decoration: none;
+}
+
+#doc a:hover {
+    text-decoration: underline;
 }
