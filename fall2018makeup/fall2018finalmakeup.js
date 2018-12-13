@@ -9,10 +9,20 @@ let text0 = ("story0.txt")
 $("#story").load(text0);
 
 //change the story text based on whichever link you click
-$("ul#stories li").change(function(){
-    text = $(this).val();
+$("ul#stories li#story0.txt").change(function(){
     $("#story").load(text);
 })
+
+let text1 = ("story1.txt")
+$("ul#stories li#story1.txt").change(function(){
+    $("#story").load(text1);
+})
+
+let text2 = ("story1.txt")
+$("ul#stories li#story2.txt").change(function(){
+    $("#story").load(text2);
+})
+
 
 /*
 <div>
