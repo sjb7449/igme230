@@ -1,11 +1,18 @@
-/*jQuery  Navbar*/
+/*JS / jQuery  Navbar*/
 $(".menu").click(function() { //clicking on a menu shows/hides associated submenu
     $(this).next(".submenu").slideToggle(); //us jQuery to slide the menu up and down when showing/hiding
 });
 
-//change the content text when clicking on the images
-let text0 = ("story0.txt") //load "direction.txt" by default
+/*JS / jQuery AJAX Content Loading*/
+//load story0.txt by default
+let text0 = ("story0.txt")
 $("#story").load(text0);
+
+//change the story text based on whichever link you click
+$("ul#stories li").change(function(){
+    text = $(this).val();
+    $("#story").load(text);
+})
 
 /*
 <div>
