@@ -8,35 +8,13 @@ $(".menu").click(function() { //clicking on a menu shows/hides associated submen
 let text0 = ("story0.txt")
 $("#story").load(text0);
 
-/*EXTRA CREDIT BUTTON*/
-let clicks = 0;
-
-$(document).ready(function(){
-  $("button").click(function(){
-    clicks += 1;
-    document.getElementById("#currentcounter").innerHTML = clicks;
-  });
-});
+$("ul#stories").change(function(){
+    text = $(this).val();
+    $("#story").load(text);
+})
 
 /*
-<section id="extracredit">
-    <h2>Extra Credit Option</h2>
-    <button id="increment">Click Me!</button>
-    <h2>Button Click Count</h2>
-    <p id="currentcount"></p>
-</section>
-
-
-int clicks = 0;
-    function click() {
-        clicks += 1;
-        document.getElementById("clicks").innerHTML = clicks;
-    };
-
-
-
-
-
+ATTEMPT #1
 //change the story text based on whichever link you click
 $("ul#stories li#story0.txt").click(function(){
     $("#story").load(text);
@@ -53,7 +31,42 @@ $("ul#stories li#story2.txt").click(function(){
 })
 */
 
+/*EXTRA CREDIT BUTTON*/
+var button = document.getElementById("currentcounter"),
+    count = 0;
+
+button.onclick = function() {
+  count += 1;
+  button.innerHTML = "Click me: " + count;
+}; 
+
 /*
+ATTEMPT #1
+let clicks = 0;
+
+$(document).ready(function(){
+  $("button").click(function(){
+    clicks += 1;
+    document.getElementById("#currentcounter").innerHTML = clicks;
+  });
+});
+*/
+/*
+<section id="extracredit">
+    <h2>Extra Credit Option</h2>
+    <button id="increment">Click Me!</button>
+    <h2>Button Click Count</h2>
+    <p id="currentcount"></p>
+</section>
+
+
+int clicks = 0;
+    function click() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+
+
 <div>
     <p class="menu">Story Text</p>
     <ul class="submenu" id="stories">
