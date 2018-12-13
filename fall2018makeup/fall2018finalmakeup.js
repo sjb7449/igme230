@@ -8,7 +8,7 @@ let text = "story0.txt"; //display story0.txt by default
 
 //changes the menu option to my name and the date by default
 $("#stories").val(text);
-$("#story").load(text);
+$("ul#stories").load(text);
 
 //click the link and have the correlating story appear
 $("#stories").change(function(){
