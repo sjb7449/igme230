@@ -3,18 +3,9 @@ $(".menu").click(function() { //clicking on a menu shows/hides associated submen
     $(this).next(".submenu").slideToggle(); //us jQuery to slide the menu up and down when showing/hiding
 });
 
-/*jQuery AJAX content load*/
-let text = "story0.txt"; //display story0.txt by default
-
-//changes the menu option to my name and the date by default
-$("#stories").val(text);
-$("ul#stories").load(text);
-
-//click the link and have the correlating story appear
-$("#stories").change(function(){
-    this = $(this).val();
-    $("#story").load(text);
-})
+//change the content text when clicking on the images
+let text0 = ("story0.txt") //load "direction.txt" by default
+$("#story").load(text0);
 
 /*
 <div>
