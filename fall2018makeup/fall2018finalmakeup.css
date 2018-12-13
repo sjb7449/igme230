@@ -1,0 +1,119 @@
+/*****************
+General Formatting
+******************/
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+section, header, footer {
+    padding: .5rem;
+}
+
+.menu {
+    width: 100%;
+    padding: .5rem;
+    background-color: #aaa;
+    margin: 1px;
+}
+
+.submenu {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    background-color: #eee;
+    padding-left: .5rem;
+}
+
+/**************
+Your Formatting
+***************/
+/*DESKTOP DISPLAY*/
+#pagegrid {
+    /*widths and heights*/
+    width: 95vw;
+    max-width: 1100px;
+    min-height: 100vh;
+    
+    /*grid*/
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 30px;
+    grid-template-areas:
+        "header header header"
+        "nav story source"
+        "nav story extracredit"
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: lightblue;
+    
+    /*flex*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#story {
+    grid-area: story;
+    background-color: lightcyan;
+}
+
+#source {
+    grid-area: source;
+    background-color: lightsalmon;
+}
+
+#extracredit {
+    grid-area: extracredit;
+    background-color: white;
+}
+
+nav {
+    grid-area: nav;
+    background-color: lavenderblush;
+}
+
+li:hover {
+    background-color: lightpink;
+    color: magenta;
+    cursor: pointer;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightblue;
+    
+    /*flex*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*MOBILE DISPLAY*/
+@media only screen and (max-width: 600px) {
+    #pagegrid {
+        width: 100vw;
+
+        /*grid*/
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px auto auto auto auto 30px;
+        grid-template-areas: "header" "story" "source" "extracredit" "nav" "footer"; 
+    }
+}
