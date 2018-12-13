@@ -58,6 +58,8 @@ Your Formatting
         "nav story source"
         "nav story extracredit"
         "footer footer footer";
+    
+    margin: 0 auto; /*center everything*/
 }
 
 header {

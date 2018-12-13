@@ -9,12 +9,12 @@ let text0 = ("story0.txt")
 $("#story").load(text0);
 
 /*EXTRA CREDIT BUTTON*/
-int clicks =0;
+let clicks = 0;
 
 $(document).ready(function(){
   $("button").click(function(){
     clicks += 1;
-    document.getElementById("currentcounter").innerHTML = clicks;
+    document.getElementById("#currentcounter").innerHTML = clicks;
   });
 });
 
