@@ -3,13 +3,14 @@ $(".menu").click(function() { //clicking on a menu shows/hides associated submen
     $(this).next(".submenu").slideToggle(); //us jQuery to slide the menu up and down when showing/hiding
 });
 
+
+
 /*JS / jQuery AJAX Content Loading*/
 //load story0.txt by default
 let text0 = ("story0.txt")
 $("#story").load(text0);
 
 //change the story text based on whichever link you click
-
 /*
 ATTEMPT #1
 $("ul#stories").change(function(){
@@ -33,13 +34,19 @@ $("ul#stories li#story2.txt").click(function(){
 })
 */
 
+
+
 /*EXTRA CREDIT*/
 //button
 var button = document.getElementById("increment"),
     count = 0;
+
+//display before the user clicks
 document.getElementById("currentcount").innerHTML = "I've been clicked " + count + " times!";
 
+//displays after the user clicks
 button.onclick = function() {
   count += 1;
   document.getElementById("currentcount").innerHTML = "I've been clicked " + count + " times!";
 };
+
