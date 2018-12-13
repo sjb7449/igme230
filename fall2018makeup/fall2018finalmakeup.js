@@ -12,7 +12,7 @@ $("#story").load(text0);
 int clicks =0;
 
 $(document).ready(function(){
-  $("button#increment").click(function(){
+  $("button").click(function(){
     clicks += 1;
     document.getElementById("currentcounter").innerHTML = clicks;
   });
