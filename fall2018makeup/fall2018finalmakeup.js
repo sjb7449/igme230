@@ -8,6 +8,35 @@ $(".menu").click(function() { //clicking on a menu shows/hides associated submen
 let text0 = ("story0.txt")
 $("#story").load(text0);
 
+/*EXTRA CREDIT BUTTON*/
+int clicks =0;
+
+$(document).ready(function(){
+  $("button#increment").click(function(){
+    clicks += 1;
+    document.getElementById("currentcounter").innerHTML = clicks;
+  });
+});
+
+/*
+<section id="extracredit">
+    <h2>Extra Credit Option</h2>
+    <button id="increment">Click Me!</button>
+    <h2>Button Click Count</h2>
+    <p id="currentcount"></p>
+</section>
+
+
+int clicks = 0;
+    function click() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+
+
+
+
+
 //change the story text based on whichever link you click
 $("ul#stories li#story0.txt").click(function(){
     $("#story").load(text);
@@ -22,6 +51,7 @@ let text2 = ("story1.txt")
 $("ul#stories li#story2.txt").click(function(){
     $("#story").load(text2);
 })
+*/
 
 /*
 <div>
