@@ -11,7 +11,7 @@ $("#story").load(text0);
 //change the story text based on whichever link you click
 $("ul#stories li").change(function(){
     text = $(this).val();
-    $("#story").load(myContent);
+    $("#story").load(text);
 })
 
 /*
