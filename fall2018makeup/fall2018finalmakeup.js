@@ -8,11 +8,6 @@ $(".menu").click(function() { //clicking on a menu shows/hides associated submen
 let text0 = ("story0.txt")
 $("#story").load(text0);
 
-$("ul#stories").change(function(){
-    text = $(this).val();
-    $("#story").load(text);
-})
-
 //change the story text based on whichever link you click
 
 /*
